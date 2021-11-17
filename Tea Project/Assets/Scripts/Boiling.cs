@@ -19,8 +19,9 @@ public class Boiling : MonoBehaviour
         boil.maxValue = 200;
         boil.value = 0;
         rd = Random.Range(20, 180);
+        position.x = Random.Range(400, 650);
         boilTwo.value = rd;
-        position = new Vector3(position.x + rd-0.5f*boilTrans.gameObject.GetComponent<RectTransform>().rect.width, position.y, position.z);
+        position = new Vector3(rd + 450, position.y, position.z);
         Instantiate(prafab, position, Quaternion.identity, canvas.transform);
     }
 
@@ -34,7 +35,7 @@ public class Boiling : MonoBehaviour
         {
             boil.value += 0.05f;
         }
-        if (!target && boil.value <= (rd+10)&& boil.value >=(rd-10))
+        if (target & boil.value <= (rd + 10) & boil.value >=(rd-10))
         {
             Debug.Log("Good boy");
         }
