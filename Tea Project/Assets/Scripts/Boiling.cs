@@ -13,6 +13,7 @@ public class Boiling : MonoBehaviour
     public Transform boilTrans;
     public GameObject prafab;
     public GameObject canvas;
+    public bool Catch = false;
     void Start()
     {
         Vector3 position = boilTrans.transform.position;
@@ -37,6 +38,7 @@ public class Boiling : MonoBehaviour
         }
         if (target & boil.value <= (rd + 10) & boil.value >=(rd-10))
         {
+            Catch = true;
             Debug.Log("Good boy");
         }
     }
