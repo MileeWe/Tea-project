@@ -21,10 +21,10 @@ public class stage : MonoBehaviour
         {
 
         }
-        if (stageNumber==1)
+        if (stageNumber==0)
         {
             kittleGO = GameObject.Find("kittle(Clone)");
-            boilingProcess.SetActive(true);
+            //boilingProcess.SetActive(true);
             if (!kittleExists)
             {
                 Instantiate(boiling, poinZero.transform.position, Quaternion.identity, poinZero.transform);
