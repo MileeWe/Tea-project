@@ -13,7 +13,8 @@ public class Boiling : MonoBehaviour
     public Transform boilTrans;
     public GameObject prafab;
     public GameObject canvas;
-    public bool Catch = false;
+    public GameObject pointZero;
+    public bool direction = false;
     void Start()
     {
         Vector3 position = boilTrans.transform.position;
@@ -28,18 +29,33 @@ public class Boiling : MonoBehaviour
 
     void Update()
     {
+        if (boil.value == boil.maxValue)
+        {
+            direction = true;
+        }
+        if (boil.value == boil.minValue)
+        {
+            direction = false;
+        }
         if (Input.GetKey(KeyCode.Space))
         {
             target = true;
         }
-        if (boil.value < maxBoilInter && !target)
+        if (!direction && !target)
         {
-            boil.value += 0.05f;
+            boil.value += 0.2f;
+        }
+        if (direction && !target)
+        {
+            boil.value -= 0.2f;
         }
         if (target & boil.value <= (rd + 10) & boil.value >=(rd-10))
         {
-            Catch = true;
-            Debug.Log("Good boy");
+            pointZero.GetComponent<stage>().boilingBool();
+        }
+        else if (target)
+        {
+            Debug.Log("Game over suka");
         }
     }
 }
