@@ -20,11 +20,12 @@ public class Boiling : MonoBehaviour
         Vector3 position = boilTrans.transform.position;
         boil.maxValue = 200;
         boil.value = 0;
-        rd = Random.Range(20, 180);
+        rd = Random.Range(0, 180);
         position.x = Random.Range(400, 650);
         boilTwo.value = rd;
-        position = new Vector3(rd + 450, position.y, position.z);
+        position = new Vector3(rd + 860, position.y, position.z);
         Instantiate(prafab, position, Quaternion.identity, canvas.transform);
+        Screen.SetResolution(1920, 1080, true);
     }
 
     void Update()
@@ -52,10 +53,13 @@ public class Boiling : MonoBehaviour
         if (target & boil.value <= (rd + 10) & boil.value >=(rd-10))
         {
             pointZero.GetComponent<stage>().boilingBool();
+            Debug.Log(boil.value);
         }
         else if (target)
         {
             Debug.Log("Game over suka");
+            Debug.Log(boil.value);
+
         }
     }
 }
