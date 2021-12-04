@@ -5,7 +5,11 @@ using UnityEngine.UI;
 
 public class orders : MonoBehaviour
 {
-    public Text text;
+    void Start()
+    {
+        
+    }
+    /*public Text text;
     public float tea;
     public float sugar;
     public float extra_travka;
@@ -58,5 +62,5 @@ public class orders : MonoBehaviour
         sugar = Random.Range(0, 7);
         extra_travka = Random.Range(0, 3);
 
-    }
+    }*/
 }
