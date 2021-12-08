@@ -48,18 +48,16 @@ public class Boiling : MonoBehaviour
         }
         if (direction && !target)
         {
-            boil.value -= 0.2f;
+            Debug.Log("Game over");
+            pointZero.GetComponent<stage>().boilingBool();
         }
         if (target & boil.value <= (rd + 10) & boil.value >=(rd-10))
         {
             pointZero.GetComponent<stage>().boilingBool();
-            Debug.Log(boil.value);
         }
         else if (target)
         {
-            Debug.Log("Game over suka");
-            Debug.Log(boil.value);
-
+            Debug.Log("Game over");
         }
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class stage : MonoBehaviour
 {
+
     public int stageNumber = 0;
     public GameObject boiling;
     public GameObject poinZero;
@@ -19,12 +20,11 @@ public class stage : MonoBehaviour
     {
         if (stageNumber==0)
         {
-
-        }
-        if (stageNumber==0)
-        {
             kittleGO = GameObject.Find("kittle(Clone)");
-            boilingProcess.SetActive(true);
+            if (Input.anyKey)
+            {
+                boilingProcess.SetActive(true);
+            }
             if (!kittleExists)
             {
                 Instantiate(boiling, poinZero.transform.position, Quaternion.identity, poinZero.transform);
@@ -40,9 +40,12 @@ public class stage : MonoBehaviour
             boilingProcess.SetActive(false);
             Destroy(kittleGO);
         }
+
     }
     public void boilingBool()
     {
         boilingProgrss = true;
     }
 }
+
+    

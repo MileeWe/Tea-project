@@ -317,14 +317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98af6a0c73e9ddd4bafa42d37d8e79ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 1008640411359648624}
-  tea: 0
-  sugar: 0
-  extra_travka: 0
-  tea_count: 0
-  sugar_count: 0
-  extra_travka_count: 0
-  stage: 0
 --- !u!1 &1008640411406850300
 GameObject:
   m_ObjectHideFlags: 0
