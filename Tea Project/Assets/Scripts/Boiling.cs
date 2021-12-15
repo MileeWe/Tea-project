@@ -9,23 +9,24 @@ public class Boiling : MonoBehaviour
     public bool target = false;
     public float maxBoilInter = 200;
     public int rd;
-    public Slider boilTwo;
     public Transform boilTrans;
-    public GameObject prafab;
+    public GameObject prefab;
     public GameObject canvas;
     public GameObject pointZero;
     public bool direction = false;
     void Start()
     {
-        Vector3 position = boilTrans.transform.position;
-        Debug.Log(boilTrans.transform.position);
+        rd = Random.Range(-260, 260);
+        Vector3 position = new Vector3(rd, 0, 0);
+        //Quaternion qua = new Quaternion(0, 0, 0, 0);
+        //Vector3 position = boilTrans.transform.position;
+        /*Debug.Log(boilTrans.transform.position);
         boil.maxValue = 200;
         boil.value = 0;
         rd = Random.Range(0, 180);
         position.x = Random.Range(200, 400);
-        boilTwo.value = rd;
-        position = new Vector3(rd, position.y, position.z);
-        Instantiate(prafab, position, Quaternion.identity, canvas.transform);
+        position = new Vector3(rd, position.y, position.z);*/
+        Instantiate(prefab, position, Quaternion.identity, canvas.transform);
         Screen.SetResolution(1920, 1080, true);
     }
 
