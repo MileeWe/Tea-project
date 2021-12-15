@@ -21,7 +21,6 @@ public class Boiling : MonoBehaviour
         Debug.Log(boilTrans.transform.position);
         boil.maxValue = 200;
         boil.value = 0;
-        position.z = 3000;
         rd = Random.Range(0, 180);
         position.x = Random.Range(200, 400);
         boilTwo.value = rd;
