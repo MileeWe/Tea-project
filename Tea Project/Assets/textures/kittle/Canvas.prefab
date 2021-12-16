@@ -335,7 +335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1008640411406850240
 RectTransform:
   m_ObjectHideFlags: 0
@@ -600,9 +600,8 @@ MonoBehaviour:
   target: 0
   maxBoilInter: 200
   rd: 0
-  boilTwo: {fileID: 1008640412118070698}
   boilTrans: {fileID: 1008640411058777629}
-  prafab: {fileID: 350807061334365365, guid: 7c03b815eab70ed41a4bdaddc1ae909f, type: 3}
+  prefab: {fileID: 0}
   canvas: {fileID: 1008640411406850300}
   pointZero: {fileID: 0}
   direction: 0

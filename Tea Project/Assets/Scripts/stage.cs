@@ -12,9 +12,11 @@ public class stage : MonoBehaviour
     public bool boilingProgrss = false;
     public GameObject boilingProcess;
     public GameObject kittleGO;
+    public GameObject cup;
     void Start()
     {
         boilingProcess.SetActive(false);
+        cup.gameObject.SetActive(false);//tyt_kakaya-to_xren'_s_inspectorom_v_stage_chekni_pls:D
     }
     void Update()
     {
@@ -24,6 +26,7 @@ public class stage : MonoBehaviour
             if (Input.anyKey)
             {
                 boilingProcess.SetActive(true);
+                boilingProgrss = true;
             }
             if (!kittleExists)
             {
@@ -38,13 +41,17 @@ public class stage : MonoBehaviour
         else
         {
             boilingProcess.SetActive(false);
-            Destroy(kittleGO);
+        }
+        if (stageNumber == 1)
+        {
+            kittleGO = GameObject.Find("Tea_Cup");
         }
 
     }
     public void boilingBool()
     {
         boilingProgrss = true;
+
     }
 }
 
