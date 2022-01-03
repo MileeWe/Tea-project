@@ -16,7 +16,7 @@ public class stage : MonoBehaviour
     void Start()
     {
         boilingProcess.SetActive(false);
-        cup.gameObject.SetActive(false);//tyt_kakaya-to_xren'_s_inspectorom_v_stage_chekni_pls:D
+        //cup.SetActive(false);//tyt_kakaya-to_xren'_s_inspectorom_v_stage_chekni_pls:D
     }
     void Update()
     {
@@ -26,7 +26,7 @@ public class stage : MonoBehaviour
             if (Input.anyKey)
             {
                 boilingProcess.SetActive(true);
-                boilingProgrss = true;
+                //boilingProgrss = true;
             }
             if (!kittleExists)
             {
