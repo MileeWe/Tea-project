@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class move_mum : MonoBehaviour
 {
-    public GameObject charter;
     public string goodTag;
     public string badTag;
     public int score = 0;
@@ -15,7 +14,7 @@ public class move_mum : MonoBehaviour
         
     }
 
-    public void OnCollisionEnter(Collision other) 
+    public void OnTriggerEnter(Collider other) 
     {
         if (other.gameObject.tag == goodTag)
         {
@@ -26,7 +25,6 @@ public class move_mum : MonoBehaviour
             score -= 1;
         }
     }
-
     // Update is called once per frame
     void FixedUpdate()
     {

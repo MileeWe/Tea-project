@@ -10,25 +10,24 @@ public class generate : MonoBehaviour
     {
         StartCoroutine(grass());
     }
-    IEnumerable grass()
+    IEnumerator grass()
     {
         Vector3 position;
-        position.y = 6.5f;
+        position.y = 16.5f;
         position.z = 9;
         position.x = 0;
         while (true)
         {
             int rd = Random.Range(0,10);
-            //position.x = Random.Range(-3.49f,3.49f);
-            /*if (rd > 7)
+            position.x = Random.Range(-3.49f,3.49f);
+            if (rd > 7)
             {
                 Instantiate(good, position, Quaternion.identity);    
             }
             else
-            {*/
-                
-            //}
-            Instantiate(bad, position, Quaternion.identity);
+            {
+                Instantiate(bad, position, Quaternion.identity);
+            }
             yield return new WaitForSeconds(1);
         }
     }
