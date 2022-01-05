@@ -19,10 +19,12 @@ public class move_mum : MonoBehaviour
         if (other.gameObject.tag == goodTag)
         {
             score += 1;
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == badTag)
         {
             score -= 1;
+            Destroy(other.gameObject);
         }
     }
     // Update is called once per frame

@@ -20,7 +20,7 @@ public class generate : MonoBehaviour
         {
             int rd = Random.Range(0,10);
             position.x = Random.Range(-3.49f,3.49f);
-            if (rd > 7)
+            if (rd > 6)
             {
                 Instantiate(good, position, Quaternion.identity);    
             }
