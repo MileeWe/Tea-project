@@ -3,7 +3,12 @@ guid: eea20dcd86aadfe48adfde514f4b84e4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - boil: {instanceID: 0}
+  - boilTrans: {instanceID: 0}
+  - prefab: {instanceID: 0}
+  - canvas: {instanceID: 0}
+  - pointZero: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

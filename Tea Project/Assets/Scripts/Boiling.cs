@@ -17,16 +17,17 @@ public class Boiling : MonoBehaviour
     void Start()
     {
         rd = Random.Range(-260, 260);
+        transform.position = new Vector3(rd, 0, -2);
         Vector3 position = new Vector3(rd, 0, 0);
         //Quaternion qua = new Quaternion(0, 0, 0, 0);
         //Vector3 position = boilTrans.transform.position;
-        /*Debug.Log(boilTrans.transform.position);
+        //Debug.Log(boilTrans.transform.position);
         boil.maxValue = 200;
         boil.value = 0;
-        rd = Random.Range(0, 180);
+        /*rd = Random.Range(0, 180);
         position.x = Random.Range(200, 400);
-        position = new Vector3(rd, position.y, position.z);*/
-        Instantiate(prefab, position, Quaternion.identity, canvas.transform);
+        position = new Vector3(rd, position.y, 0);
+        Instantiate(prefab, position, Quaternion.identity, canvas.transform);*/
         Screen.SetResolution(1920, 1080, true);
     }
 
@@ -46,7 +47,7 @@ public class Boiling : MonoBehaviour
         }
         if (!direction && !target)
         {
-            boil.value += 0.2f;
+            boil.value += 1f;
         }
         if (direction && !target)
         {
