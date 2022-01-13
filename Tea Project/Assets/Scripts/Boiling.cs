@@ -16,9 +16,9 @@ public class Boiling : MonoBehaviour
     public bool direction = false;
     void Start()
     {
-        rd = Random.Range(-260, 260);
-        transform.position = new Vector3(rd, 0, -2);
-        Vector3 position = new Vector3(rd, 0, 0);
+        rd = Random.Range(0, 251);
+        prefab.transform.position = new Vector3(rd, rd, rd);
+        //Vector3 position = new Vector3(rd, 0, 0);
         //Quaternion qua = new Quaternion(0, 0, 0, 0);
         //Vector3 position = boilTrans.transform.position;
         //Debug.Log(boilTrans.transform.position);
@@ -54,7 +54,7 @@ public class Boiling : MonoBehaviour
             Debug.Log("Game over");
             pointZero.GetComponent<stage>().boilingBool();
         }
-        if (target & boil.value <= (rd + 10) & boil.value >=(rd-10))
+        if (target & boil.value <= (rd + 0.1) & boil.value >=(rd-0.1))
         {
             pointZero.GetComponent<stage>().boilingBool();
         }
