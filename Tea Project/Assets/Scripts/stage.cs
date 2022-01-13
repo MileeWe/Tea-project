@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class stage : MonoBehaviour
 {
@@ -19,20 +20,20 @@ public class stage : MonoBehaviour
     }
     void Update()
     {
+        //это нада не трожь switch (stage)
         if (stageNumber==0)
         {
             kittleGO = GameObject.Find("kittle(Clone)");
             if (Input.anyKey)
             {
                 boilingProcess.SetActive(true);
-                //boilingProgrss = true;
             }
             if (!kittleExists)
             {
                 Instantiate(boiling, poinZero.transform.position, Quaternion.identity, poinZero.transform);
                 kittleExists = true;
             }
-            if (boilingProgrss)
+            if (Input.GetKey(KeyCode.S))
             {
                 stageNumber++;
             }
@@ -40,6 +41,10 @@ public class stage : MonoBehaviour
         else
         {
             boilingProcess.SetActive(false);
+        }
+        if (stageNumber == 1)
+        {
+            SceneManager.LoadScene("mumble"); 
         }
 
     }
