@@ -16,18 +16,8 @@ public class Boiling : MonoBehaviour
     public bool direction = false;
     void Start()
     {
-        rd = Random.Range(0, 251);
-        prefab.transform.position = new Vector3(rd, rd, rd);
-        //Vector3 position = new Vector3(rd, 0, 0);
-        //Quaternion qua = new Quaternion(0, 0, 0, 0);
-        //Vector3 position = boilTrans.transform.position;
-        //Debug.Log(boilTrans.transform.position);
         boil.maxValue = 200;
         boil.value = 0;
-        /*rd = Random.Range(0, 180);
-        position.x = Random.Range(200, 400);
-        position = new Vector3(rd, position.y, 0);
-        Instantiate(prefab, position, Quaternion.identity, canvas.transform);*/
         Screen.SetResolution(1920, 1080, true);
     }
 
@@ -47,20 +37,11 @@ public class Boiling : MonoBehaviour
         }
         if (!direction && !target)
         {
-            boil.value += 1f;
+            boil.value += 0.1f;
         }
         if (direction && !target)
         {
-            Debug.Log("Game over");
-            pointZero.GetComponent<stage>().boilingBool();
-        }
-        if (target & boil.value <= (rd + 0.1) & boil.value >=(rd-0.1))
-        {
-            pointZero.GetComponent<stage>().boilingBool();
-        }
-        else if (target)
-        {
-            Debug.Log("Game over");
+            pointZero.GetComponent<stage>().nextStage();
         }
     }
 }

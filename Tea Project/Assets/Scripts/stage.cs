@@ -51,7 +51,10 @@ public class stage : MonoBehaviour
     public void boilingBool()
     {
         boilingProgrss = true;
-
+    }    
+    public void nextStage()
+    {
+        stageNumber++;
     }
 }
 

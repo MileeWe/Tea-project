@@ -56,6 +56,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -65,33 +67,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1470}
     - Class: 114
-      Script: {instanceID: 1658}
+      Script: {instanceID: 1734}
     - Class: 114
-      Script: {instanceID: 1738}
+      Script: {instanceID: 1814}
     - Class: 114
-      Script: {instanceID: 1816}
+      Script: {instanceID: 1892}
     - Class: 114
-      Script: {instanceID: 2014}
+      Script: {instanceID: 2088}
     - Class: 114
-      Script: {instanceID: 2142}
+      Script: {instanceID: 2216}
     - Class: 114
-      Script: {instanceID: 2184}
+      Script: {instanceID: 2258}
     - Class: 114
-      Script: {instanceID: 2294}
+      Script: {instanceID: 2368}
     - Class: 114
-      Script: {instanceID: 2316}
+      Script: {instanceID: 2390}
     - Class: 114
-      Script: {instanceID: 2472}
+      Script: {instanceID: 2546}
     - Class: 114
-      Script: {instanceID: 2592}
+      Script: {instanceID: 2666}
     - Class: 114
-      Script: {instanceID: 3260}
+      Script: {instanceID: 3334}
     - Class: 114
-      Script: {instanceID: 3500}
+      Script: {instanceID: 3574}
     - Class: 114
-      Script: {instanceID: 3794}
+      Script: {instanceID: 3868}
     - Class: 114
-      Script: {instanceID: 4056}
+      Script: {instanceID: 4130}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -135,8 +137,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -144,19 +144,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1468}
     - Class: 114
-      Script: {instanceID: 2312}
+      Script: {instanceID: 2386}
     - Class: 114
-      Script: {instanceID: 2316}
+      Script: {instanceID: 2390}
     - Class: 114
-      Script: {instanceID: 2428}
+      Script: {instanceID: 2502}
     - Class: 114
-      Script: {instanceID: 2436}
+      Script: {instanceID: 2510}
     - Class: 114
-      Script: {instanceID: 2592}
+      Script: {instanceID: 2666}
     - Class: 114
-      Script: {instanceID: 2776}
+      Script: {instanceID: 2850}
     - Class: 114
-      Script: {instanceID: 4338}
+      Script: {instanceID: 4412}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -646,5 +646,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/main.unity
   - Assets/Scenes/mumble.unity
-  playerPath: "C:/Users/\u0410\u0440\u0442\u0451\u043C/Desktop/\u043C\u0430\u043C\u043A\u0430/Tea
-    Project.exe"
+  playerPath: "C:/Users/a.kurdin/Desktop/\u043C\u0430\u043C\u043A\u0430/Tea Project.exe"
