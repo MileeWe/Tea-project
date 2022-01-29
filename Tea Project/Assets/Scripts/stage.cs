@@ -33,7 +33,7 @@ public class stage : MonoBehaviour
                 Instantiate(boiling, poinZero.transform.position, Quaternion.identity, poinZero.transform);
                 kittleExists = true;
             }
-            if (Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.S)&& Input.GetKey(KeyCode.LeftControl)&&Input.GetKey(KeyCode.RightShift))
             {
                 stageNumber++;
             }

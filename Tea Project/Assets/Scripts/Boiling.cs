@@ -10,13 +10,15 @@ public class Boiling : MonoBehaviour
     public float maxBoilInter = 200;
     public int rd;
     public Transform boilTrans;
-    public GameObject prefab;
-    public GameObject canvas;
+    public Slider boilTwo;
     public GameObject pointZero;
     public bool direction = false;
     void Start()
     {
+        rd = Random.Range(25,170);
+        boilTwo.maxValue = 200;
         boil.maxValue = 200;
+        boilTwo.value = rd;
         boil.value = 0;
         Screen.SetResolution(1920, 1080, true);
     }
@@ -41,7 +43,15 @@ public class Boiling : MonoBehaviour
         }
         if (direction && !target)
         {
+            //Debug.Log("Pidoras? mat jiva?");
+        }
+        if (boil.value > (rd-10)&&boil.value<(rd+10)&&target)
+        {
             pointZero.GetComponent<stage>().nextStage();
+        }
+        else if (target)
+        {
+            //Debug.Log("Pidoras? mat jiva?");
         }
     }
 }
