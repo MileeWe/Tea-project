@@ -317,6 +317,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98af6a0c73e9ddd4bafa42d37d8e79ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marijuana: 
+  sugar: 0
+  strength: 0
+  orderText: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!1 &1008640411406850300
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +334,7 @@ GameObject:
   - component: {fileID: 1008640411406850241}
   - component: {fileID: 1008640411406850242}
   - component: {fileID: 1008640411406850243}
+  - component: {fileID: -7016239562091577011}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -419,6 +425,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &-7016239562091577011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008640411406850300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed90ec6fc334c4429c7742c2f281ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1008640411618698103
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,8 +619,7 @@ MonoBehaviour:
   maxBoilInter: 200
   rd: 0
   boilTrans: {fileID: 1008640411058777629}
-  prefab: {fileID: 0}
-  canvas: {fileID: 1008640411406850300}
+  boilTwo: {fileID: 0}
   pointZero: {fileID: 0}
   direction: 0
 --- !u!1 &1008640412118070692

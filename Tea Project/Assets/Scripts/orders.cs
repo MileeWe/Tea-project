@@ -40,12 +40,11 @@ public class orders : MonoBehaviour
         {
             a = true;
         }
-        Debug.Log(marijuana);
         rd = Random.Range(0,4);
         sugar = rd;
         rd = Random.Range(1,10);
         strength = rd;
-        orderText.text = $"Make me tea with weed {marijuana}, with {sugar} spoons of sugar and strength {strength}";
+        orderText.text = $"Make me tea with {marijuana} weed, with {sugar} spoons of sugar and strength {strength}";
         
     }
     void Update()
@@ -54,5 +53,10 @@ public class orders : MonoBehaviour
         {
             canvas.SetActive(false);
         }
+    }
+    public void GameOver()
+    {
+        orderText.text = $"Game over bitch";
+        canvas.SetActive(true);
     }
 }

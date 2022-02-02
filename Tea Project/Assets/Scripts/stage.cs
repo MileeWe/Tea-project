@@ -16,6 +16,10 @@ public class stage : MonoBehaviour
     public GameObject cup;
     void Start()
     {
+        if (Input.anyKey)
+        {
+            kittleGO = GameObject.Find("kittle(Clone)");
+        }
         boilingProcess.SetActive(false);
     }
     void Update()
@@ -23,7 +27,6 @@ public class stage : MonoBehaviour
         //это нада не трожь switch (stage)
         if (stageNumber==0)
         {
-            kittleGO = GameObject.Find("kittle(Clone)");
             if (Input.anyKey)
             {
                 boilingProcess.SetActive(true);

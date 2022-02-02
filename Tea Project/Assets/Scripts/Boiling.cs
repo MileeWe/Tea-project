@@ -43,7 +43,7 @@ public class Boiling : MonoBehaviour
         }
         if (direction && !target)
         {
-            //Debug.Log("Pidoras? mat jiva?");
+            pointZero.GetComponent<orders>().GameOver();
         }
         if (boil.value > (rd-10)&&boil.value<(rd+10)&&target)
         {
@@ -51,7 +51,7 @@ public class Boiling : MonoBehaviour
         }
         else if (target)
         {
-            //Debug.Log("Pidoras? mat jiva?");
+            pointZero.GetComponent<orders>().GameOver();
         }
     }
 }
