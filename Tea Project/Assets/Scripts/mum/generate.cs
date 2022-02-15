@@ -28,7 +28,7 @@ public class generate : MonoBehaviour
             {
                 Instantiate(bad, position, Quaternion.identity);
             }
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.6F);
         }
     }
 }
