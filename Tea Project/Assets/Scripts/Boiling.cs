@@ -22,6 +22,10 @@ public class Boiling : MonoBehaviour
         boil.value = 0;
         Screen.SetResolution(1920, 1080, true);
     }
+    public void FF()
+    {
+        target = true;
+    }
 
     void Update()
     {
@@ -49,9 +53,9 @@ public class Boiling : MonoBehaviour
         {
             pointZero.GetComponent<stage>().nextStage();
         }
-        else if (target)
-        {
-            pointZero.GetComponent<orders>().GameOver();
-        }
+        //else if (target)
+        //{
+        //    pointZero.GetComponent<orders>().GameOver();
+        //}
     }
 }

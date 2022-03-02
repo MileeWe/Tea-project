@@ -1,10 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
-using UnityEngine.UI;
 
 public class PlayerRay : MonoBehaviour
 {
+    public Transform Pointer;
+    public stage sas;
     void Start()
     {
     }
@@ -12,52 +13,27 @@ public class PlayerRay : MonoBehaviour
 
     void Update()
     {
-        //выводит имя объекта при нажатии
-        if (Input.GetMouseButtonDown(0))
+        Ray ray = new Ray();
+        ray.origin = transform.position;
+        ray.direction = transform.forward;
+        Debug.DrawRay(transform.position, transform.forward * 10f, Color.yellow);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit)) 
         {
-            string a = "ban";
-            RaycastHit hit;
-            Ray ray;
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, 100.0f))
+            Pointer.position = hit.point;
+            if (hit.collider.gameObject.GetComponent<Selectable>() && Input.GetKey(KeyCode.Mouse0))
             {
-                if (hit.transform != null)
-                {
-                    PrintName(hit.transform.gameObject);
-                    a = hit.transform.gameObject.name;
-                }
-                if (a == "kittle(Clone)")
-                {
-                    //нужен переход на stage
-                    //GetComponent<stage>().boilingBool();
-                }
+                //hit.collider.gameObject.GetComponent<Selectable>().Select();
+                sas.stageNumber = 1;
             }
-        } 
-    }
-    void PrintName(GameObject go)
-    {
-        Debug.Log((go.name));
-    }
-
-    /*bool asas()
-    {
-        
-        string ass = "ban";
-        if (Input.GetMouseButtonDown(0))
-        {
-            RaycastHit hit;
-            Ray ray;
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, 100.0f))
+            if (hit.collider.gameObject.GetComponent<onMouseEnter>() && Input.GetKey(KeyCode.Mouse0))
             {
-                if (hit.transform != null)
-                {
-                    PrintName(hit.transform.gameObject);
-                    ass = hit.transform.gameObject.name;
-                }
+                // hit.collider.gameObject.GetComponent<onMouseEnter>().Select();
+                sas.stageNumber = 2;
             }
         }
-        return (ass == "kittle(Clone)");
-    }*/
+       
+    }
+   
 
 }

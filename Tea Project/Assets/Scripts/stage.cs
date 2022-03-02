@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class stage : MonoBehaviour
 {
 
-    public int stageNumber = 0;
+    public int stageNumber;
     public GameObject boiling;
     public GameObject poinZero;
     public bool kittleExists = false;
@@ -16,21 +16,16 @@ public class stage : MonoBehaviour
     public GameObject cup;
     void Start()
     {
-        if (Input.anyKey)
-        {
-            kittleGO = GameObject.Find("kittle(Clone)");
-        }
+        kittleGO = GameObject.Find("kittle(Clone)");
         boilingProcess.SetActive(false);
     }
     void Update()
     {
         //это нада не трожь switch (stage)
-        if (stageNumber==0)
+        if (stageNumber==1)
         {
-            if (Input.anyKey)
-            {
-                boilingProcess.SetActive(true);
-            }
+            boilingProcess.SetActive(true);
+            
             if (!kittleExists)
             {
                 Instantiate(boiling, poinZero.transform.position, Quaternion.identity, poinZero.transform);
@@ -45,7 +40,7 @@ public class stage : MonoBehaviour
         {
             boilingProcess.SetActive(false);
         }
-        if (stageNumber == 1)
+        if (stageNumber == 2)
         {
             SceneManager.LoadScene("mumble"); 
         }
