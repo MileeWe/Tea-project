@@ -42,7 +42,7 @@ public class stage : MonoBehaviour
         }
         if (stageNumber == 2)
         {
-            SceneManager.LoadScene("mumble"); 
+            SceneManager.LoadScene(1);
         }
 
     }
