@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class main : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        Ray ray = new Ray(transform.position,transform.forward);
+        Debug.DrawRay(transform.position, transform.forward * 100f, Color.black);
+
+        Physics.Raycast(ray);
+
+        if (Physics.Raycast(ray))
+        {
+            Debug.Log("Hit smth");
+        }
     }
 }
