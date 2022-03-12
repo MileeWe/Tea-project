@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: cb820cadaf0c49f4c989c06aac652aeb, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -175,7 +175,7 @@ MonoBehaviour:
   kittleExists: 0
   boilingProgrss: 0
   boilingProcess: {fileID: 1683042757}
-  kittleGO: {fileID: 0}
+  kittleGO: {fileID: 444961394751741199, guid: a720e4f37c3bd1243a9d2bfc216bd4d9, type: 3}
   cup: {fileID: 0}
 --- !u!114 &9545146
 MonoBehaviour:
@@ -256,7 +256,7 @@ Light:
   m_GameObject: {fileID: 63409574}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 2
+  m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.6698113, g: 0.4349655, b: 0.08530616, a: 1}
   m_Intensity: 1
@@ -317,7 +317,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63409574}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 5.15, z: 0}
+  m_LocalPosition: {x: 2.86, y: 4.46, z: -5.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

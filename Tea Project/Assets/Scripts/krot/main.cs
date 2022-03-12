@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class main : MonoBehaviour
 {
+
+    public Transform pointer;
+
     void Update()
     {
         Ray ray = new Ray(transform.position,transform.forward);
         Debug.DrawRay(transform.position, transform.forward * 100f, Color.black);
 
-        Physics.Raycast(ray);
-
-        if (Physics.Raycast(ray))
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
         {
-            Debug.Log("Hit smth");
+            pointer.position = hit.point;
+
+            if(hit.collider.gameObject.GetComponent<Selecta>())
+            {
+                hit.collider.gameObject.GetComponent<Selecta>().Select();
+            }
         }
     }
 }
