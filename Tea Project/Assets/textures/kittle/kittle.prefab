@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 965743580339554229}
   - component: {fileID: 1665245409465719456}
-  - component: {fileID: 2971234917968257026}
   - component: {fileID: 3579098983557141440}
   m_Layer: 0
   m_Name: kittle
@@ -48,18 +47,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: c9febe691197d4a42bc6d0ec73ae7251, type: 3}
---- !u!114 &2971234917968257026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 444961394751741199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b0a43e893915084cb1d064942553977, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3579098983557141440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,3 +153,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0a43e893915084cb1d064942553977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boilong: {fileID: 0}

@@ -4,7 +4,7 @@ using System.Collections;
 
 public class PlayerRay : MonoBehaviour
 {
-    public Transform Pointer;
+    //public Transform Pointer;
     public stage sas;
     void Start()
     {
@@ -20,7 +20,7 @@ public class PlayerRay : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit)) 
         {
-            Pointer.position = hit.point;
+            //Pointer.position = hit.point;
             if (hit.collider.gameObject.GetComponent<Selectable>() && Input.GetKey(KeyCode.Mouse0))
             {
                 //hit.collider.gameObject.GetComponent<Selectable>().Select();

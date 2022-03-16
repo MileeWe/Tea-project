@@ -21,16 +21,16 @@ public class stage : MonoBehaviour
     }
     void Update()
     {
+        if (!kittleExists)
+        {
+            Instantiate(boiling, poinZero.transform.position, Quaternion.identity, poinZero.transform);
+            kittleExists = true;
+        }
         //это нада не трожь switch (stage)
         if (stageNumber==1)
         {
             boilingProcess.SetActive(true);
             
-            if (!kittleExists)
-            {
-                Instantiate(boiling, poinZero.transform.position, Quaternion.identity, poinZero.transform);
-                kittleExists = true;
-            }
             if (Input.GetKey(KeyCode.S)&& Input.GetKey(KeyCode.LeftControl)&&Input.GetKey(KeyCode.RightShift))
             {
                 stageNumber++;
@@ -46,13 +46,15 @@ public class stage : MonoBehaviour
         }
 
     }
-    public void boilingBool()
+    public void boilingBoolTrue()
     {
         boilingProgrss = true;
     }    
-    public void nextStage()
+    public void boilingBoolFalse()
     {
-        stageNumber++;
+        boilingProcess.SetActive(false);
+        stageNumber = 0;
+        //тут должна быть анимация с наливанием чая
     }
 }
 

@@ -51,7 +51,7 @@ public class Boiling : MonoBehaviour
         }
         if (boil.value > (rd-10)&&boil.value<(rd+10)&&target)
         {
-            pointZero.GetComponent<stage>().nextStage();
+            pointZero.GetComponent<stage>().boilingBoolFalse();
         }
         //else if (target)
         //{
