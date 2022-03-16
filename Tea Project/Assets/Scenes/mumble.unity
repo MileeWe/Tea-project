@@ -572,6 +572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodTag: good
   badTag: bad
+  badgoodTag: badgood
   score: 0
   scoreText: {fileID: 527435669}
 --- !u!65 &1868444630
@@ -664,6 +665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bad: {fileID: 8507616211238210775, guid: fc9d2201e3181454ea66482ea63b9b91, type: 3}
   good: {fileID: 7365067774631755688, guid: 2477145f6c66c8d4db45fc4d4fbccecd, type: 3}
+  badgood: {fileID: 7365067774631755688, guid: 71c40e6f77158b7479da8e28c2ae803b, type: 3}
 --- !u!54 &1868444635
 Rigidbody:
   m_ObjectHideFlags: 0

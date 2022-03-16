@@ -2,8 +2,10 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Boiling
+    - Eccentric.CameraMove
+    - PlayerRay
+    - Selectable
     - generate
-    - move
     - move_mum
     - move_projecti
     - onMouseEnter
@@ -27,7 +29,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
-    - UnityEngine.UI.RawImage
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
@@ -54,6 +55,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
@@ -67,33 +70,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1470}
     - Class: 114
-      Script: {instanceID: 1734}
+      Script: {instanceID: 1636}
     - Class: 114
-      Script: {instanceID: 1814}
+      Script: {instanceID: 1662}
     - Class: 114
-      Script: {instanceID: 1892}
+      Script: {instanceID: 1742}
     - Class: 114
-      Script: {instanceID: 2088}
+      Script: {instanceID: 1820}
     - Class: 114
-      Script: {instanceID: 2216}
+      Script: {instanceID: 2020}
     - Class: 114
-      Script: {instanceID: 2258}
+      Script: {instanceID: 2190}
     - Class: 114
-      Script: {instanceID: 2368}
+      Script: {instanceID: 2320}
     - Class: 114
-      Script: {instanceID: 2390}
+      Script: {instanceID: 2440}
     - Class: 114
-      Script: {instanceID: 2546}
+      Script: {instanceID: 2476}
     - Class: 114
-      Script: {instanceID: 2666}
+      Script: {instanceID: 2596}
     - Class: 114
-      Script: {instanceID: 3334}
+      Script: {instanceID: 2782}
     - Class: 114
-      Script: {instanceID: 3574}
+      Script: {instanceID: 3266}
     - Class: 114
-      Script: {instanceID: 3868}
+      Script: {instanceID: 3468}
     - Class: 114
-      Script: {instanceID: 4130}
+      Script: {instanceID: 3508}
+    - Class: 114
+      Script: {instanceID: 3744}
+    - Class: 114
+      Script: {instanceID: 3804}
+    - Class: 114
+      Script: {instanceID: 4066}
+    - Class: 114
+      Script: {instanceID: 15880}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -104,11 +115,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
     Assets/Scenes/mumble.unity:
     - Class: 1
@@ -137,6 +152,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -144,19 +161,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1468}
     - Class: 114
-      Script: {instanceID: 2386}
+      Script: {instanceID: 2316}
     - Class: 114
-      Script: {instanceID: 2390}
+      Script: {instanceID: 2320}
     - Class: 114
-      Script: {instanceID: 2502}
+      Script: {instanceID: 2432}
     - Class: 114
-      Script: {instanceID: 2510}
+      Script: {instanceID: 2440}
     - Class: 114
-      Script: {instanceID: 2666}
+      Script: {instanceID: 2596}
     - Class: 114
-      Script: {instanceID: 2850}
+      Script: {instanceID: 2782}
     - Class: 114
-      Script: {instanceID: 4412}
+      Script: {instanceID: 4350}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -172,6 +189,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -192,6 +211,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Selecta
   - hash:
       serializedVersion: 2
       Hash: 77aaaaa51f7a8d8ff333a879741e47d2
@@ -216,6 +241,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: LayoutElement
+  - hash:
+      serializedVersion: 2
+      Hash: 017378d49fb333db3098ed880234cb74
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Eccentric
+    className: CameraMove
   - hash:
       serializedVersion: 2
       Hash: 6bc76e17f0d5e93f3eea7f5a2fe227f3
@@ -254,6 +285,12 @@ ScriptsOnlyBuild:
     className: stage
   - hash:
       serializedVersion: 2
+      Hash: 0962f780a60001f39bee899d42173c8a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: combinations
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -278,16 +315,10 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 9c71cbfee2811f968d895e67a46ea43e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: orders
-  - hash:
-      serializedVersion: 2
-      Hash: 48edcb30513b92146d5e548df00b99c7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: move
   - hash:
       serializedVersion: 2
       Hash: 4d6ef018a67c4990b23d4ff00403ceed
@@ -354,6 +385,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: e059ae5d7cd578b66d42bfb36325f1af
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MouseLook
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -530,13 +567,19 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
+      Hash: dd85711aa3dfd07720ebfca1574e2286
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerRay
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 800d6182993f721eee019125fbb61a07
+      Hash: 2a8b37674e80a1efa7f671ee25fdddbb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Boiling
@@ -578,6 +621,12 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Selectable
+  - hash:
+      serializedVersion: 2
       Hash: 0fb27be807aa299702f28ad0bcad1f46
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -614,13 +663,19 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 2b2e47f035fe7b59dea32ae74508b894
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: main
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 5d064456c40f7c34690dc0c9d079accc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: move_projecti

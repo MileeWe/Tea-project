@@ -7,6 +7,7 @@ public class move_mum : MonoBehaviour
 {
     public string goodTag;
     public string badTag;
+    public string badgoodTag;
     public int score = 0;
     public Text scoreText;  
     void Start()
@@ -19,6 +20,11 @@ public class move_mum : MonoBehaviour
         if (other.gameObject.tag == goodTag)
         {
             score += 1;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == badgoodTag)
+        {
+            score += 2;
             Destroy(other.gameObject);
         }
         if (other.gameObject.tag == badTag)

@@ -6,6 +6,7 @@ public class generate : MonoBehaviour
 {
     public GameObject bad;
     public GameObject good;
+    public GameObject badgood;
     void Start() 
     {
         StartCoroutine(grass());
@@ -20,9 +21,13 @@ public class generate : MonoBehaviour
         {
             int rd = Random.Range(0,10);
             position.x = Random.Range(-3.49f,3.49f);
-            if (rd > 6)
+            if (rd <= 3)
             {
                 Instantiate(good, position, Quaternion.identity);    
+            }
+            else if((rd > 3) & (rd < 5))
+            {
+                Instantiate(badgood, position, Quaternion.identity);
             }
             else
             {
