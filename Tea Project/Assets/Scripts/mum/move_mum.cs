@@ -8,8 +8,11 @@ public class move_mum : MonoBehaviour
     public string goodTag;
     public string badTag;
     public string badgoodTag;
+    public orders very_sus;
+    public string ddd;
     public int score = 0;
-    public Text scoreText;  
+    public Text scoreText;
+    // & (very_sus == "yellow")
     void Start()
     {
         
@@ -17,7 +20,9 @@ public class move_mum : MonoBehaviour
 
     public void OnTriggerEnter(Collider other) 
     {
-        if (other.gameObject.tag == goodTag)
+        ddd = very_sus.marijuana;
+        Debug.Log(ddd);
+        if ((other.gameObject.tag == goodTag))
         {
             score += 1;
             Destroy(other.gameObject);
@@ -33,7 +38,7 @@ public class move_mum : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-    // Update is called once per frame
+    // Update is called once per frame //wat?
     void FixedUpdate()
     {
         scoreText.text = "Score: " + score;

@@ -573,6 +573,8 @@ MonoBehaviour:
   goodTag: good
   badTag: bad
   badgoodTag: badgood
+  very_sus: {fileID: 0}
+  ddd: 
   score: 0
   scoreText: {fileID: 527435669}
 --- !u!65 &1868444630
