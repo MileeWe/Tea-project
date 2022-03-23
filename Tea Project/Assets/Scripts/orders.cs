@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class orders : MonoBehaviour
 {
-    public string marijuana;
+    public static string marijuana;
     public int sugar;
     public int strength;
     bool a;
@@ -15,7 +15,6 @@ public class orders : MonoBehaviour
 
     private void Start()
     {
-        
         int rd = Random.Range(0,5);
         switch (rd)
         {

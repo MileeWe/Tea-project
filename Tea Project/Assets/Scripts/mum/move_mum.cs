@@ -20,21 +20,23 @@ public class move_mum : MonoBehaviour
 
     public void OnTriggerEnter(Collider other) 
     {
-        ddd = very_sus.marijuana;
+        var FBI_CONTROL = orders.marijuana;
+        Debug.Log(FBI_CONTROL);
+        //ddd = very_sus.marijuana;
         Debug.Log(ddd);
-        if ((other.gameObject.tag == goodTag))
+        if ((other.gameObject.tag == goodTag) &(FBI_CONTROL == "green"))
         {
             score += 1;
             Destroy(other.gameObject);
         }
-        if (other.gameObject.tag == badgoodTag)
+        if ((other.gameObject.tag == badgoodTag) &(FBI_CONTROL == "yellow"))
         {
-            score += 2;
+            score += 1;
             Destroy(other.gameObject);
         }
-        if (other.gameObject.tag == badTag)
+        if ((other.gameObject.tag == badTag) &(FBI_CONTROL == "red"))
         {
-            score -= 1;
+            score += 1;
             Destroy(other.gameObject);
         }
     }
