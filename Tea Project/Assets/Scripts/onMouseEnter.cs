@@ -19,9 +19,9 @@ public class onMouseEnter : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0))
-        {
+        //if (Input.GetKey(KeyCode.Mouse0))
+        //{
             
-        }
+        //}
     }
 }

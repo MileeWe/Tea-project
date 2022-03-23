@@ -21,11 +21,11 @@ public class stage : MonoBehaviour
     }
     void Update()
     {
-        if (!kittleExists)
-        {
-            Instantiate(boiling, poinZero.transform.position, Quaternion.identity, poinZero.transform);
-            kittleExists = true;
-        }
+        //if (!kittleExists)
+        //{
+        //    Instantiate(boiling, poinZero.transform.position, Quaternion.identity, poinZero.transform);
+        //    kittleExists = true;
+        //}
         //это нада не трожь switch (stage)
         if (stageNumber==1)
         {
@@ -42,7 +42,7 @@ public class stage : MonoBehaviour
         }
         if (stageNumber == 2)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("mumble");
         }
 
     }
@@ -56,6 +56,10 @@ public class stage : MonoBehaviour
         stageNumber = 0;
         //тут должна быть анимация с наливанием чая
     }
+    //public void travka()
+    //{
+    //    stageNumber = 2;
+    //}
 }
 
     
