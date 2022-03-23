@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Boiling
+    - Button
     - Eccentric.CameraMove
     - PlayerRay
     - Selectable
@@ -26,6 +27,7 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
@@ -50,8 +52,6 @@ ScriptsOnlyBuild:
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
@@ -78,8 +78,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1820}
     - Class: 114
-      Script: {instanceID: 2020}
-    - Class: 114
       Script: {instanceID: 2190}
     - Class: 114
       Script: {instanceID: 2320}
@@ -92,19 +90,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2782}
     - Class: 114
-      Script: {instanceID: 3266}
+      Script: {instanceID: 3268}
     - Class: 114
-      Script: {instanceID: 3468}
+      Script: {instanceID: 3470}
     - Class: 114
-      Script: {instanceID: 3508}
+      Script: {instanceID: 3510}
     - Class: 114
-      Script: {instanceID: 3744}
+      Script: {instanceID: 3746}
     - Class: 114
-      Script: {instanceID: 3804}
-    - Class: 114
-      Script: {instanceID: 4066}
-    - Class: 114
-      Script: {instanceID: 15880}
+      Script: {instanceID: 16236}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -124,6 +118,69 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 258
+      Script: {instanceID: 0}
+    Assets/Scenes/menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1470}
+    - Class: 114
+      Script: {instanceID: 1742}
+    - Class: 114
+      Script: {instanceID: 2020}
+    - Class: 114
+      Script: {instanceID: 2320}
+    - Class: 114
+      Script: {instanceID: 2440}
+    - Class: 114
+      Script: {instanceID: 2476}
+    - Class: 114
+      Script: {instanceID: 2596}
+    - Class: 114
+      Script: {instanceID: 2782}
+    - Class: 114
+      Script: {instanceID: 2812}
+    - Class: 114
+      Script: {instanceID: 2866}
+    - Class: 114
+      Script: {instanceID: 3806}
+    - Class: 114
+      Script: {instanceID: 4068}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/mumble.unity:
     - Class: 1
@@ -173,7 +230,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2782}
     - Class: 114
-      Script: {instanceID: 4350}
+      Script: {instanceID: 4352}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -315,13 +372,13 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 9c71cbfee2811f968d895e67a46ea43e
+      Hash: 79081ac700665ef78c399790423eba0b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: orders
   - hash:
       serializedVersion: 2
-      Hash: 4d6ef018a67c4990b23d4ff00403ceed
+      Hash: 9de4e5013110d1fbb10135a293bc5822
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: move_mum
@@ -339,7 +396,7 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: 3f1e4b245798473deb19dc5a6ed33755
+      Hash: 01def379f505c9c11ed3240896b74187
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: generate
@@ -439,6 +496,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: 8e6ceabfd38a184413d69b7db56c89cc
@@ -699,6 +762,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   platform: 19
   scenePathNames:
+  - Assets/Scenes/menu.unity
   - Assets/Scenes/main.unity
   - Assets/Scenes/mumble.unity
-  playerPath: "C:/Users/a.kurdin/Desktop/\u043C\u0430\u043C\u043A\u0430/Tea Project.exe"
+  playerPath: C:/Users/e.vetrov/Desktop/Tea/Tea Project.exe
