@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class stage : MonoBehaviour
 {
+    public GameObject not_aaaa;
     public Animator aaaa;
     public int stageNumber;
     public GameObject boiling;
@@ -16,7 +17,7 @@ public class stage : MonoBehaviour
     public GameObject cup;
     void Start()
     {
-        aaaa = kittleGO.GetComponent<Animator>();
+        aaaa = not_aaaa.GetComponent<Animator>();
         kittleGO = GameObject.Find("kittle(Clone)");
         boilingProcess.SetActive(false);
     }

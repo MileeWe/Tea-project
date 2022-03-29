@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c8a5261f5f9ed46b9111005e5cf41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  not_aaaa: {fileID: 1190369136}
   aaaa: {fileID: 0}
   stageNumber: 0
   boiling: {fileID: 444961394751741199, guid: a720e4f37c3bd1243a9d2bfc216bd4d9, type: 3}
@@ -1146,7 +1147,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7eb46d66d15e659489436cda94696568, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0

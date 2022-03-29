@@ -39,6 +39,21 @@ public class move_mum : MonoBehaviour
             score += 1;
             Destroy(other.gameObject);
         }
+        if ((other.gameObject.tag == badTag) |(other.gameObject.tag == badgoodTag) &(FBI_CONTROL == "green"))
+        {
+            score -= 1;
+            Destroy(other.gameObject);
+        }
+        if (((other.gameObject.tag == badTag) | (other.gameObject.tag == goodTag)) & (FBI_CONTROL == "yellow"))
+        {
+            score -= 1;
+            Destroy(other.gameObject);
+        }
+        if ((other.gameObject.tag == badgoodTag) | (other.gameObject.tag == goodTag)) & (FBI_CONTROL == "red"))
+        {
+            score -= 1;
+            Destroy(other.gameObject);
+        }
     }
     // Update is called once per frame //wat?
     void FixedUpdate()
