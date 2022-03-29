@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class stage : MonoBehaviour
 {
-
+    public Animator aaaa;
     public int stageNumber;
     public GameObject boiling;
     public GameObject poinZero;
@@ -16,6 +16,7 @@ public class stage : MonoBehaviour
     public GameObject cup;
     void Start()
     {
+        aaaa = kittleGO.GetComponent<Animator>();
         kittleGO = GameObject.Find("kittle(Clone)");
         boilingProcess.SetActive(false);
     }
@@ -54,7 +55,7 @@ public class stage : MonoBehaviour
     {
         boilingProcess.SetActive(false);
         stageNumber = 0;
-        //тут должна быть анимация с наливанием чая
+        aaaa.SetBool("tea", true);
     }
     //public void travka()
     //{
