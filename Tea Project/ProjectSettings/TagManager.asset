@@ -6,6 +6,8 @@ TagManager:
   tags:
   - good
   - bad
+  - badgood
+  - legendary
   layers:
   - Default
   - TransparentFX

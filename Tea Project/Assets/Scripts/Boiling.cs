@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Boiling : MonoBehaviour
 {
+    public stage suck;
     public Slider boil;
     public bool target = false;
     public float maxBoilInter = 200;
@@ -51,11 +52,14 @@ public class Boiling : MonoBehaviour
         }
         if (boil.value > (rd-10)&&boil.value<(rd+10)&&target)
         {
-            pointZero.GetComponent<stage>().boilingBoolFalse();
+            suck.stageNumber = 0;
+            suck.boilingProcess.SetActive(false);
+            pointZero.GetComponent<stage>().Anima();
+
         }
-        //else if (target)
-        //{
-        //    pointZero.GetComponent<orders>().GameOver();
-        //}
+        else if (target)
+        {
+            pointZero.GetComponent<orders>().GameOver();
+        }
     }
 }

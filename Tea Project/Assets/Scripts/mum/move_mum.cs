@@ -8,6 +8,7 @@ public class move_mum : MonoBehaviour
     public string goodTag;
     public string badTag;
     public string badgoodTag;
+    public string legendaryTag;
     public orders very_sus;
     public string ddd;
     public int score = 0;
@@ -24,6 +25,11 @@ public class move_mum : MonoBehaviour
         Debug.Log(FBI_CONTROL);
         //ddd = very_sus.marijuana;
         Debug.Log(ddd);
+        if (other.gameObject.tag == legendaryTag)
+        {
+            score += 3;
+            Destroy(other.gameObject);
+        }
         if ((other.gameObject.tag == goodTag) &(FBI_CONTROL == "green"))
         {
             score += 1;
@@ -49,7 +55,7 @@ public class move_mum : MonoBehaviour
             score -= 1;
             Destroy(other.gameObject);
         }
-        if ((other.gameObject.tag == badgoodTag) | (other.gameObject.tag == goodTag)) & (FBI_CONTROL == "red"))
+        if (((other.gameObject.tag == badgoodTag) | (other.gameObject.tag == goodTag)) & (FBI_CONTROL == "red"))
         {
             score -= 1;
             Destroy(other.gameObject);

@@ -20,6 +20,7 @@ public class stage : MonoBehaviour
         aaaa = not_aaaa.GetComponent<Animator>();
         kittleGO = GameObject.Find("kittle(Clone)");
         boilingProcess.SetActive(false);
+        aaaa.SetBool("tea", false);
     }
     void Update()
     {
@@ -46,16 +47,13 @@ public class stage : MonoBehaviour
         {
             SceneManager.LoadScene("mumble");
         }
-
     }
     public void boilingBoolTrue()
     {
         boilingProgrss = true;
     }    
-    public void boilingBoolFalse()
+    public void Anima()
     {
-        boilingProcess.SetActive(false);
-        stageNumber = 0;
         aaaa.SetBool("tea", true);
     }
     //public void travka()
