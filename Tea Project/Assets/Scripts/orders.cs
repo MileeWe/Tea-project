@@ -15,7 +15,7 @@ public class orders : MonoBehaviour
 
     private void Start()
     {
-        int rd = Random.Range(0,5);
+        int rd = Random.Range(1,6);
         switch (rd)
         {
             case 1:

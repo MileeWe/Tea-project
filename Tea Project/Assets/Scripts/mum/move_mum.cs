@@ -18,31 +18,35 @@ public class move_mum : MonoBehaviour
     {
         
     }
+    void Update()
+    {
+        var FBI_CONTROL = orders.marijuana;
+        Debug.Log(FBI_CONTROL);
+    }
 
     public void OnTriggerEnter(Collider other) 
     {
         var FBI_CONTROL = orders.marijuana;
         Debug.Log(FBI_CONTROL);
-        //ddd = very_sus.marijuana;
-        Debug.Log(ddd);
         if (other.gameObject.tag == legendaryTag)
         {
             score += 3;
             Destroy(other.gameObject);
         }
-        if ((other.gameObject.tag == goodTag) &(FBI_CONTROL == "green"))
+        if ((other.gameObject.tag == goodTag) &&(FBI_CONTROL == "green"))
         {
             score += 1;
             Destroy(other.gameObject);
         }
-        if ((other.gameObject.tag == badgoodTag) &(FBI_CONTROL == "yellow"))
+        if ((other.gameObject.tag == badgoodTag) &&(FBI_CONTROL == "yellow"))
         {
             score += 1;
             Destroy(other.gameObject);
         }
-        if ((other.gameObject.tag == badTag) &(FBI_CONTROL == "red"))
+        if ((other.gameObject.tag == badTag) &&(FBI_CONTROL == "red"))
         {
             score += 1;
+            Debug.Log("ABHJSDBDSHFAFHKDVBFHKSBJKDFJKAD");
             Destroy(other.gameObject);
         }
         if ((other.gameObject.tag == badTag) |(other.gameObject.tag == badgoodTag) &(FBI_CONTROL == "green"))
