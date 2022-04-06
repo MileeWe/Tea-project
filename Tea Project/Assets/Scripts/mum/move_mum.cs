@@ -10,7 +10,7 @@ public class move_mum : MonoBehaviour
     public string badgoodTag;
     public string legendaryTag;
     public orders very_sus;
-    public string ddd;
+    //public string ddd;
     public int score = 0;
     public Text scoreText;
     // & (very_sus == "yellow")
@@ -26,6 +26,7 @@ public class move_mum : MonoBehaviour
 
     public void OnTriggerEnter(Collider other) 
     {
+        Debug.Log(other.gameObject.tag);
         var FBI_CONTROL = orders.marijuana;
         Debug.Log(FBI_CONTROL);
         if (other.gameObject.tag == legendaryTag)
@@ -33,40 +34,137 @@ public class move_mum : MonoBehaviour
             score += 3;
             Destroy(other.gameObject);
         }
-        if ((other.gameObject.tag == goodTag) &&(FBI_CONTROL == "green"))
+        switch (FBI_CONTROL)
         {
-            score += 1;
-            Destroy(other.gameObject);
-        }
-        if ((other.gameObject.tag == badgoodTag) &&(FBI_CONTROL == "yellow"))
-        {
-            score += 1;
-            Destroy(other.gameObject);
-        }
-        if ((other.gameObject.tag == badTag) &&(FBI_CONTROL == "red"))
-        {
-            score += 1;
-            Debug.Log("ABHJSDBDSHFAFHKDVBFHKSBJKDFJKAD");
-            Destroy(other.gameObject);
-        }
-        if ((other.gameObject.tag == badTag) |(other.gameObject.tag == badgoodTag) &(FBI_CONTROL == "green"))
-        {
-            score -= 1;
-            Destroy(other.gameObject);
-        }
-        if (((other.gameObject.tag == badTag) | (other.gameObject.tag == goodTag)) & (FBI_CONTROL == "yellow"))
-        {
-            score -= 1;
-            Destroy(other.gameObject);
-        }
-        if (((other.gameObject.tag == badgoodTag) | (other.gameObject.tag == goodTag)) & (FBI_CONTROL == "red"))
-        {
-            score -= 1;
-            Destroy(other.gameObject);
+            case "green":
+                switch (other.gameObject.tag)
+                {
+                    case "good":
+                        score += 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "badgood":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "bad":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "orange":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "beb":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                }
+                break;
+            case "yellow":
+                switch (other.gameObject.tag)
+                {
+                    case "good":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "badgood":
+                        score += 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "bad":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "orange":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "beb":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                }
+                break;
+            case "red":
+                switch (other.gameObject.tag)
+                {
+                    case "good":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "badgood":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "bad":
+                        score += 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "orange":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "beb":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                }
+                break;
+            case "orange":
+                switch (other.gameObject.tag)
+                {
+                    case "good":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "badgood":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "bad":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "orange":
+                        score += 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "beb":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                }
+                break;
+            case "beb":
+                switch (other.gameObject.tag)
+                {
+                    case "good":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "badgood":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "bad":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "orange":
+                        score -= 1;
+                        Destroy(other.gameObject);
+                        break;
+                    case "beb":
+                        score += 1;
+                        Destroy(other.gameObject);
+                        break;
+                }
+                break;
         }
     }
-    // Update is called once per frame //wat?
-    void FixedUpdate()
+// Update is called once per frame //wat?
+void FixedUpdate()
     {
         scoreText.text = "Score: " + score;
         if (Input.GetKey(KeyCode.A))
