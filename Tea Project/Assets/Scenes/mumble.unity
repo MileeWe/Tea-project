@@ -577,6 +577,7 @@ MonoBehaviour:
   very_sus: {fileID: 0}
   score: 0
   scoreText: {fileID: 527435669}
+  stop: {fileID: 1868444634}
 --- !u!65 &1868444630
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -671,6 +672,7 @@ MonoBehaviour:
   legendary: {fileID: 7365067774631755688, guid: 0d41de217d1e93d4e91af69dce2fe3a0, type: 3}
   orange: {fileID: 7365067774631755688, guid: 01be23f4758efc34faec2e8ef198787a, type: 3}
   beb: {fileID: 7365067774631755688, guid: 02c07f354fb92ce44891621cc75a994d, type: 3}
+  gen: 0
 --- !u!54 &1868444635
 Rigidbody:
   m_ObjectHideFlags: 0

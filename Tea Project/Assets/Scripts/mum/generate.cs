@@ -10,8 +10,10 @@ public class generate : MonoBehaviour
     public GameObject legendary;
     public GameObject orange;
     public GameObject beb;
+    public bool gen;
     void Start() 
     {
+        gen = true;
         StartCoroutine(grass());
     }
     IEnumerator grass()
@@ -20,7 +22,8 @@ public class generate : MonoBehaviour
         position.y = 16.5f;
         position.z = 9;
         position.x = 0;
-        while (true)
+        Debug.Log(gen);
+        while (gen)
         {
             int rd = Random.Range(1,17);
             position.x = Random.Range(-3.49f,3.49f);

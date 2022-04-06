@@ -10,19 +10,18 @@ public class move_mum : MonoBehaviour
     public string badgoodTag;
     public string legendaryTag;
     public orders very_sus;
-    //public string ddd;
     public int score = 0;
     public Text scoreText;
-    // & (very_sus == "yellow")
+    public generate stop;
     void Start()
     {
         
     }
-    void Update()
+    /*void Update()
     {
         var FBI_CONTROL = orders.marijuana;
         Debug.Log(FBI_CONTROL);
-    }
+    }*/
 
     public void OnTriggerEnter(Collider other) 
     {
@@ -162,10 +161,13 @@ public class move_mum : MonoBehaviour
                 }
                 break;
         }
+        
     }
-// Update is called once per frame //wat?
-void FixedUpdate()
+    // Update is called once per frame //wat?
+    void FixedUpdate()
     {
+        if (score >= 5) u_win_bitch();
+        else if (score <= -10) u_lose_bitch();
         scoreText.text = "Score: " + score;
         if (Input.GetKey(KeyCode.A))
         {
@@ -181,5 +183,16 @@ void FixedUpdate()
                 transform.position += new Vector3(7*Time.deltaTime,0,0);
             }
         }
+        void u_lose_bitch()
+        {
+        scoreText.text = "you lose";
+        stop.gen = false;
+        }
+        void u_win_bitch()
+        {
+        scoreText.text = "you win";
+        stop.gen = false;
+        }
     }
+    
 }

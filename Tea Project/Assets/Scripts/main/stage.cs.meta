@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 06c8a5261f5f9ed46b9111005e5cf41b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - boiling: {instanceID: 0}
+  - poinZero: {instanceID: 0}
+  - boilingProcess: {fileID: 1008640411406850300, guid: 5d5053d1f9f17d64ab3757284df36e84, type: 3}
+  - kittleGO: {instanceID: 0}
+  - cup: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
