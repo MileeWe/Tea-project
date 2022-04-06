@@ -9,6 +9,8 @@ public class NpcMove : MonoBehaviour
     public float MoveSpeed = 1;
     public float step;
     public Boiling kak;
+    public bool text;
+    public float TimeLeft;
     void Start()
     {
         //back.position = transform.position;
@@ -18,10 +20,9 @@ public class NpcMove : MonoBehaviour
     {
         if (kak.reer == false)
         {
-            Debug.Log("lox");
             step = MoveSpeed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, dot.position, step);
-            transform.rotation = Quaternion.Euler(0, -90, 0);
+            transform.rotation = Quaternion.Euler(0, -90, 0); 
         }
         else if (kak.reer == true)
         {
@@ -29,6 +30,12 @@ public class NpcMove : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, -180, 0);
         }
         else Debug.Log("lox x2");
+        TimeLeft = 0.02;
+        TimeLeft -= Time.deltaTime;
+        if (TimeLeft < 0)
+        {
+            text = true;
+        }
     }
     public void go_back_i_want_to_be_monkey()
     {

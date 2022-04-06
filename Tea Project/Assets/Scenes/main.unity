@@ -195,6 +195,7 @@ MonoBehaviour:
   strength: 0
   orderText: {fileID: 179512083}
   canvas: {fileID: 850937440}
+  aaaaa: {fileID: 354131502}
 --- !u!1 &47766724
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +657,8 @@ MonoBehaviour:
   MoveSpeed: 1
   step: 0
   kak: {fileID: 2144020224}
+  text: 0
+  TimeLeft: 0
 --- !u!136 &354131503
 CapsuleCollider:
   m_ObjectHideFlags: 0

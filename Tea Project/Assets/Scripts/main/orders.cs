@@ -11,6 +11,7 @@ public class orders : MonoBehaviour
     bool a;
     public Text orderText;
     public GameObject canvas;
+    public NpcMove aaaaa;
 
 
     private void Start()
@@ -43,11 +44,12 @@ public class orders : MonoBehaviour
         sugar = rd;
         rd = Random.Range(1,10);
         strength = rd;
-        orderText.text = $"Make me tea with {marijuana} weed, with {sugar} spoons of sugar and strength {strength}";
+        
         
     }
     void Update()
     {
+        if (aaaaa.text == true) { Debug.Log("cyk"); orderText.text = $"Make me tea with {marijuana} weed, with {sugar} spoons of sugar and strength {strength}"; }
         if (Input.anyKey)
         {
             canvas.SetActive(false);
