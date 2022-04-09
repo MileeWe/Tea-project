@@ -11,6 +11,7 @@ public class NpcMove : MonoBehaviour
     public Boiling kak;
     public bool text;
     public float TimeLeft;
+    public GameObject canvas;
     void Start()
     {
         //back.position = transform.position;
@@ -21,7 +22,7 @@ public class NpcMove : MonoBehaviour
         if (other.gameObject.tag == "dot")
         {
             Debug.Log("ggg");
-            text = true;
+            canvas.SetActive(true);
         }
     }
 

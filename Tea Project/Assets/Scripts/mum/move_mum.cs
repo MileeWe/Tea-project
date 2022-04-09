@@ -166,7 +166,7 @@ public class move_mum : MonoBehaviour
     // Update is called once per frame //wat?
     void FixedUpdate()
     {
-        if (score >= 5) u_win_bitch();
+        if (score >= 10) u_win_bitch();
         else if (score <= -10) u_lose_bitch();
         scoreText.text = "Score: " + score;
         if (Input.GetKey(KeyCode.A))

@@ -5,21 +5,20 @@ using UnityEngine;
 public class main : MonoBehaviour
 {
 
-    public Transform pointer;
+    public Camera camera;
 
     void Update()
     {
-        Ray ray = new Ray(transform.position,transform.forward);
-        Debug.DrawRay(transform.position, transform.forward * 100f, Color.black);
-
+        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
-            pointer.position = hit.point;
+            //pointer.position = hit.point;
 
-            if(hit.collider.gameObject.GetComponent<Selecta>())
+            Selecta selecta = hit.collider.gameObject.GetComponent<Selecta>();
+            if (selecta && Input.GetKeyDown(KeyCode.Mouse0))
             {
-                hit.collider.gameObject.GetComponent<Selecta>().Select();
+                selecta.Select();
             }
         }
     }
