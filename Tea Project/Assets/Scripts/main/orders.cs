@@ -16,6 +16,7 @@ public class orders : MonoBehaviour
 
     private void Start()
     {
+        canvas.SetActive(false);
         int rd = Random.Range(1,6);
         switch (rd)
         {
@@ -44,15 +45,15 @@ public class orders : MonoBehaviour
         sugar = rd;
         rd = Random.Range(1,10);
         strength = rd;
-        
+        orderText.text = $"Make me tea with {marijuana} weed, with {sugar} spoons of sugar and strength {strength}";
         
     }
     void Update()
     {
-        if (aaaaa.text == true) { Debug.Log("cyk"); orderText.text = $"Make me tea with {marijuana} weed, with {sugar} spoons of sugar and strength {strength}"; }
-        if (Input.anyKey)
+        if (aaaaa.text)
         {
-            canvas.SetActive(false);
+            Debug.Log("ggg");
+            canvas.SetActive(true);
         }
     }
     public void GameOver()

@@ -10,6 +10,7 @@ TagManager:
   - legendary
   - beb
   - orange
+  - dot
   layers:
   - Default
   - TransparentFX

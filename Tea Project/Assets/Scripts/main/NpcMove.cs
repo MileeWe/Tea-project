@@ -16,13 +16,22 @@ public class NpcMove : MonoBehaviour
         //back.position = transform.position;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "dot")
+        {
+            Debug.Log("ggg");
+            text = true;
+        }
+    }
+
     void Update()
     {
         if (kak.reer == false)
         {
             step = MoveSpeed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, dot.position, step);
-            transform.rotation = Quaternion.Euler(0, -90, 0); 
+            transform.rotation = Quaternion.Euler(0, -90, 0);
         }
         else if (kak.reer == true)
         {
@@ -30,12 +39,12 @@ public class NpcMove : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, -180, 0);
         }
         else Debug.Log("lox x2");
-        TimeLeft = 0.02;
+        /*TimeLeft = 0.02;
         TimeLeft -= Time.deltaTime;
         if (TimeLeft < 0)
         {
             text = true;
-        }
+        }*/
     }
     public void go_back_i_want_to_be_monkey()
     {
