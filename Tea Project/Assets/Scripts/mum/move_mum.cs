@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class move_mum : MonoBehaviour
 {
@@ -185,13 +186,14 @@ public class move_mum : MonoBehaviour
         }
         void u_lose_bitch()
         {
-        scoreText.text = "you lose";
-        stop.gen = false;
+            scoreText.text = "you lose";
+            stop.gen = false;
         }
         void u_win_bitch()
         {
-        scoreText.text = "you win";
-        stop.gen = false;
+            scoreText.text = "you win";
+            stop.gen = false;
+            SceneManager.LoadScene("main");
         }
     }
     

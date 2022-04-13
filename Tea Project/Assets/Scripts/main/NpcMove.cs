@@ -12,17 +12,41 @@ public class NpcMove : MonoBehaviour
     public bool text;
     public float TimeLeft;
     public GameObject canvas;
+    Quaternion startRotation;
+    Quaternion endRotation;
+    float rotationProgress = -1;
+    public bool rotateStart = false;
+    public float rotate = 0;
     void Start()
     {
-        //back.position = transform.position;
+
+        //    startRotation = transform.rotation;
+        //    endRotation = Quaternion.Euler(0, -90, 0);
+        //    rotationProgress = 0;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "dot")
         {
-            Debug.Log("ggg");
-            canvas.SetActive(true);
+            
+            StartCoroutine("startRot");
+        }
+    }
+
+    IEnumerator startRot()
+    {
+        int i = 0;
+        while (true)
+        {
+            if (i==1)
+            {
+                
+                rotateStart = true;
+                StopAllCoroutines();
+            }
+            i++;
+            yield return new WaitForSeconds(.5f);
         }
     }
 
@@ -32,25 +56,25 @@ public class NpcMove : MonoBehaviour
         {
             step = MoveSpeed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, dot.position, step);
-            transform.rotation = Quaternion.Euler(0, -90, 0);
         }
         else if (kak.reer == true)
         {
             transform.position = Vector3.MoveTowards(transform.position, back.position, step);
             transform.rotation = Quaternion.Euler(0, -180, 0);
         }
-        else Debug.Log("lox x2");
-        /*TimeLeft = 0.02;
-        TimeLeft -= Time.deltaTime;
-        if (TimeLeft < 0)
+        /*if (rotationProgress < 1 && rotationProgress >= 0)
         {
-            text = true;
+            rotationProgress += Time.deltaTime * 5;
+            transform.rotation = Quaternion.Lerp(startRotation, endRotation, rotationProgress);
         }*/
+        if (rotateStart && rotate > -90)
+        {
+            rotate -= 0.5f;
+            transform.rotation = Quaternion.Euler(0,rotate,0);
+        }
+        else if(rotateStart && rotate == -90)
+        {
+            canvas.SetActive(true);
+        }
     }
-    public void go_back_i_want_to_be_monkey()
-    {
-        Debug.Log("sam kek");
-        transform.position = Vector3.MoveTowards(transform.position, back.position, step);
-        transform.rotation = Quaternion.Euler(0, -180, 0);
-    }
-}
+}   

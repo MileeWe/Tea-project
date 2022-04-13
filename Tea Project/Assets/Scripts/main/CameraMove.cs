@@ -15,7 +15,7 @@ namespace Eccentric {
 
 
         void Update() {
-            Move();
+            //Move();
             Rotate();
         }
 
