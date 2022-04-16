@@ -5,19 +5,13 @@ using UnityEngine;
 
 public class combinations : MonoBehaviour
 {
-    //public int[] combin = new int[5];
     public int i = 0;
     public randomSpec RandomSpec;
-    public int[] combin = new int[4];
+    public int[] combin = new int[4] { 3, 4, 5, 6 };
     void Start()
     {
-        /*for (int i = 0; i < combin.Length; i++)
-        {
-            int rd = UnityEngine.Random.Range(1, 9);
-            combin[i] = rd;
-            
-        }*/
-        combin = create();
+        //combin = createArea(4);
+        //combin = { 3,4,5,6 };
         StartCoroutine("krot");
     }
 
@@ -26,10 +20,11 @@ public class combinations : MonoBehaviour
         
         while (true)
         {
-            if (i<combin.Length)
+            if (i<9)
             {
                 GameObject sphere = GameObject.Find(Convert.ToString(combin[i]));
-                sphere.GetComponent<Renderer>().material.color = Color.black;
+                //GetComponent<Renderer>().material.color = Color.black;
+                sphere.gameObject.GetComponent<Selecta>().black();
                 i++;
             }
             else
@@ -40,87 +35,32 @@ public class combinations : MonoBehaviour
         }
     }
 
-    public int[] create()
+    public int[] createArea(int n)
     {
-        int[] area = new int[4];
-        area[0] = UnityEngine.Random.Range(0, 9);
-        int i = 0;
-        while (true)
-        {
-            if (i == 0)
+        int[] area = new int[n];
+        for (int i = 0; i < area.Length; i++)
+        { 
+            while (true)
             {
-                area[1] = UnityEngine.Random.Range(0, 9);
-                i++;
-            }
-            else
-            {
-                if (area[1] == area[0])
-                {
-                    area[1] = UnityEngine.Random.Range(0, 9);
-                }
-                else
+                area[i] = UnityEngine.Random.Range(0, 9);
+                if (!SearchMatches(area, area[i]))
                 {
                     break;
                 }
             }
-        }
-        while (true)
-        {
-            if (i == 0)
-            {
-                area[2] = UnityEngine.Random.Range(0, 9);
-                i++;
-            }
-            else
-            {
-                if (area[2] == area[0] || area[2] == area[1])
-                {
-                    area[2] = UnityEngine.Random.Range(0, 9);
-                }
-                else
-                {
-                    break;
-                }
-            }
-        }
-        while (true)
-        {
-            if (i == 0)
-            {
-                area[3] = UnityEngine.Random.Range(0, 9);
-                i++;
-            }
-            else
-            {
-                if (area[3] == area[0] || area[3] == area[1] || area[3] == area[2])
-                {
-                    area[3] = UnityEngine.Random.Range(0, 9);
-                }
-                else
-                {
-                    break;
-                }
-            }
-        }
-        while (true)
-        {
-            if (i == 0)
-            {
-                area[4] = UnityEngine.Random.Range(0, 9);
-                i++;
-            }
-            else
-            {
-                if (area[4] == area[0] || area[4] == area[1] || area[4] == area[2] || area[4] == area[3])
-                {
-                    area[4] = UnityEngine.Random.Range(0, 9);
-                }
-                else
-                {
-                    break;
-                }
-            }
+            
         }
         return area;
+    }
+    public bool SearchMatches(int[] area, int n)
+    {
+        for (int i = 0; i < area.Length; i++)
+        {
+            if (area[i] == n)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

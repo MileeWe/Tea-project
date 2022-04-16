@@ -12,4 +12,8 @@ public class Selecta : MonoBehaviour
     {
         GetComponent<Renderer>().material.color = Color.gray;
     }
+    public void black()
+    {
+        GetComponent<Renderer>().material.color = Color.black;
+    }
 }
