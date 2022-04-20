@@ -15,6 +15,7 @@ public class Qest : MonoBehaviour
     }
     void Update()
     {
+        //Debug.Log(PlayerPrefs.GetString("weed", "def"));
         if (weed)
         {
 

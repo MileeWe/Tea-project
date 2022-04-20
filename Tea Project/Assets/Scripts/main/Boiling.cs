@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+//using System.Text.Json;
+//using System.Text.Json.Serialization;
 
 public class Boiling : MonoBehaviour
 {
@@ -24,6 +26,14 @@ public class Boiling : MonoBehaviour
         boilTwo.value = rd;
         boil.value = 0;
         Screen.SetResolution(1920, 1080, true);
+
+        //string json = JsonUtility.ToJson(kek);
+        //PlayerPrefs.SetString("AMOGUS", json);
+        //NpcMove myObject = JsonUtility.FromJson<NpcMove>(json);
+        //string st = PlayerPrefs.GetString("AMOGUS", "def");
+
+
+        //kek = JsonUtility.FromJson<NpcMove>(PlayerPrefs.GetString("AMOGUS", "def"));
     }
     public void FF()
     {
