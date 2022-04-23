@@ -4,20 +4,40 @@ using UnityEngine;
 
 public class SaveLoad : MonoBehaviour
 {
-    public string weed = "false";
-    public GameObject f;
-    public bool boil = false;
-    public bool krot = false;
+    /*struct Object
+    {
+        public bool weed;
+        public bool boil;
+        public bool krot;
+    }
     void Start()
     {
-        string weedJ = JsonUtility.ToJson(f);
-        string boilJ = JsonUtility.ToJson(boil);
-        string krotJ = JsonUtility.ToJson(krot);
+        //****Saving****\\
+        Object Example = new Object();
 
-        PlayerPrefs.SetString("weed", weedJ);
-        PlayerPrefs.SetString("boil", boilJ);
-        PlayerPrefs.SetString("krot", krotJ);
+        Example.weed = false;
+        Example.boil = false;
+        Example.krot = false;
 
-        Debug.Log(PlayerPrefs.GetString("weed", "def"));
+        //****Loading****\\
+        PlayerPrefs.SetString("Quest",JsonUtility.ToJson(Example));
+    }*/
+
+    class Salo
+    {
+        public bool weed = false;
+        public bool boil = false;
+        public bool krot = false;
+    }
+
+    void Start()
+    {
+        string json = JsonUtility.ToJson("Salo");
+
+        Salo weed = JsonUtility.FromJson<Salo>(json);
+    }
+    public void classS()
+    {
+           
     }
 }

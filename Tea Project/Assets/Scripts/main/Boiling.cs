@@ -18,8 +18,18 @@ public class Boiling : MonoBehaviour
     public bool direction = false;
     public bool reer = false;
     public NpcMove kek;
+    public GameObject qest;
     void Start()
     {
+        /*Object LoadedExample = JsonUtility.FromJson<Object>(PlayerPrefs.GetString("Quest"));
+
+        Debug.Log(LoadedExample.weed);*/
+        /*
+        SaveLoad qestG = qest.GetComponent<SaveLoad>();
+
+        SaveLoad.Salo weed = JsonUtility.FromJson<Salo>(json);*/
+
+
         rd = Random.Range(25,170);
         boilTwo.maxValue = 200;
         boil.maxValue = 200;
