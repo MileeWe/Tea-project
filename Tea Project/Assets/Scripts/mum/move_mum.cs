@@ -16,6 +16,8 @@ public class move_mum : MonoBehaviour
     public generate stop;
     public string json;
     public Salo obj;
+    public NpcMove kipyatok;
+    public CapsuleCollider CAPSULE;
     void Start()
     {
         json = PlayerPrefs.GetString("AMOGUS", "def");
@@ -195,11 +197,13 @@ public class move_mum : MonoBehaviour
     }
     public void u_win_bitch()
     {
-            scoreText.text = "you win";
-            stop.gen = false;
-            obj.weed = true;
-            json = JsonUtility.ToJson(obj);
-            PlayerPrefs.SetString("AMOGUS", json);
-            SceneManager.LoadScene("main");
+        scoreText.text = "you win";
+        stop.gen = false;
+        obj.weed = true;
+        json = JsonUtility.ToJson(obj);
+        PlayerPrefs.SetString("AMOGUS", json);
+        Debug.Log(json); 
+        CAPSULE.GetComponent<NpcMove>().Load();
+        SceneManager.LoadScene("main");
     }
 }

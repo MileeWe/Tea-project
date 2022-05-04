@@ -357,6 +357,7 @@ GameObject:
   - component: {fileID: 150000855}
   - component: {fileID: 150000856}
   - component: {fileID: 150000857}
+  - component: {fileID: 150000858}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -483,6 +484,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mouseSensitivity: 0.4
   _moveSpeed: 2
+--- !u!114 &150000858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150000850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 864ff35bccd7422429d2a3ce02ed1d2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  json: 
 --- !u!1 &179512081
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,6 +790,9 @@ MonoBehaviour:
   canvas: {fileID: 850937440}
   rotateStart: 0
   rotate: 0
+  load: 0
+  npc: 
+  xz: {fileID: 0}
 --- !u!136 &354131503
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -983,10 +1000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9bbcb327056b6247bf5bb2e51c5d743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weed: 0
-  f: {fileID: 1190369136}
-  boil: 0
-  krot: 0
+  json: 
 --- !u!1 &591262371
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,6 +2798,10 @@ MonoBehaviour:
   direction: 0
   reer: 0
   kek: {fileID: 354131502}
+  qest: {fileID: 0}
+  json: 
+  load: 0
+  npc: 
 --- !u!114 &2144020225
 MonoBehaviour:
   m_ObjectHideFlags: 0

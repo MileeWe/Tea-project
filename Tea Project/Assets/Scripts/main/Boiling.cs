@@ -21,6 +21,8 @@ public class Boiling : MonoBehaviour
     public GameObject qest;
     public string json;
     public Salo obj;
+    public bool load;
+    public string npc;
     void Start()
     {
         json = PlayerPrefs.GetString("AMOGUS", "def");
@@ -51,7 +53,6 @@ public class Boiling : MonoBehaviour
         //string st = PlayerPrefs.GetString("AMOGUS", "def");
         //if (st == "def") Debug.Log("lox");
         //else Debug.Log("vse ravno lox");
-
         if (boil.value == boil.maxValue)
         {
             direction = true;
@@ -77,7 +78,7 @@ public class Boiling : MonoBehaviour
             suck.stageNumber = 0;
             suck.boilingProcess.SetActive(false);
             obj.boil = true;
-            reer = true;
+            //reer = true;
             //pointZero.GetComponent<stage>().Anima();
 
         }
@@ -85,7 +86,10 @@ public class Boiling : MonoBehaviour
         {
             pointZero.GetComponent<orders>().GameOver();
         }
+        npc = JsonUtility.ToJson(kek);
         json = JsonUtility.ToJson(obj);
+        Debug.Log(json);
         PlayerPrefs.SetString("AMOGUS", json);
+        PlayerPrefs.SetString("NPC_SAVE", npc);
     }
 }

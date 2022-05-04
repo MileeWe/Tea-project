@@ -17,12 +17,26 @@ public class NpcMove : MonoBehaviour
     float rotationProgress = -1;
     public bool rotateStart = false;
     public float rotate = 0;
+    public bool load = false;
+    public string npc;
+    public NpcMove xz;
+    public Salo obj;
     void Start()
     {
+        //npc = PlayerPrefs.GetString("AMOGUS", "def");
+        //obj = JsonUtility.FromJson<Salo>(npc);
+        //npc = PlayerPrefs.GetString("NPC_SAVE","def");
+        //xz = JsonUtility.FromJson<NpcMove>(npc);
+        //if (obj.weed) Load();  
 
         //    startRotation = transform.rotation;
         //    endRotation = Quaternion.Euler(0, -90, 0);
         //    rotationProgress = 0;
+    }
+    public void Load()
+    { 
+        npc = PlayerPrefs.GetString("NPC_SAVE", "def");
+        xz = JsonUtility.FromJson<NpcMove>(npc);
     }
 
     private void OnTriggerEnter(Collider other)
