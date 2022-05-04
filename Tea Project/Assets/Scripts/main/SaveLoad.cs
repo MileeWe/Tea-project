@@ -2,39 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class Salo
+{
+    public bool weed = false;
+    public bool boil = false;
+    public bool krot = false;
+}
 public class SaveLoad : MonoBehaviour
 {
-    /*struct Object
-    {
-        public bool weed;
-        public bool boil;
-        public bool krot;
-    }
+    public Salo obj;
+    public string json;
     void Start()
     {
-        //****Saving****\\
-        Object Example = new Object();
-
-        Example.weed = false;
-        Example.boil = false;
-        Example.krot = false;
-
-        //****Loading****\\
-        PlayerPrefs.SetString("Quest",JsonUtility.ToJson(Example));
-    }*/
-
-    class Salo
-    {
-        public bool weed = false;
-        public bool boil = false;
-        public bool krot = false;
-    }
-
-    void Start()
-    {
-        string json = JsonUtility.ToJson("Salo");
-
-        Salo weed = JsonUtility.FromJson<Salo>(json);
+        json = PlayerPrefs.GetString("AMOGUS", "def");
+        if (json != "def") obj = JsonUtility.FromJson<Salo>(json);
+        else obj = new Salo();
+        json = JsonUtility.ToJson(obj);
+        Debug.Log(json);
+        PlayerPrefs.SetString("AMOGUS", json);
     }
     public void classS()
     {

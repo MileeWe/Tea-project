@@ -14,9 +14,13 @@ public class move_mum : MonoBehaviour
     public int score = 0;
     public Text scoreText;
     public generate stop;
+    public string json;
+    public Salo obj;
     void Start()
     {
-        
+        json = PlayerPrefs.GetString("AMOGUS", "def");
+        Debug.Log(json);
+        obj = JsonUtility.FromJson<Salo>(json);
     }
     /*void Update()
     {
@@ -26,9 +30,7 @@ public class move_mum : MonoBehaviour
 
     public void OnTriggerEnter(Collider other) 
     {
-        Debug.Log(other.gameObject.tag);
         var FBI_CONTROL = orders.marijuana;
-        Debug.Log(FBI_CONTROL);
         if (other.gameObject.tag == legendaryTag)
         {
             score += 3;
@@ -184,17 +186,20 @@ public class move_mum : MonoBehaviour
                 transform.position += new Vector3(7*Time.deltaTime,0,0);
             }
         }
-        void u_lose_bitch()
-        {
+        
+    }
+    public void u_lose_bitch()
+    {
             scoreText.text = "you lose";
             stop.gen = false;
-        }
-        void u_win_bitch()
-        {
+    }
+    public void u_win_bitch()
+    {
             scoreText.text = "you win";
             stop.gen = false;
+            obj.weed = true;
+            json = JsonUtility.ToJson(obj);
+            PlayerPrefs.SetString("AMOGUS", json);
             SceneManager.LoadScene("main");
-        }
     }
-    
 }

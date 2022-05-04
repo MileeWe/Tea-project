@@ -19,17 +19,11 @@ public class Boiling : MonoBehaviour
     public bool reer = false;
     public NpcMove kek;
     public GameObject qest;
+    public string json;
+    public Salo obj;
     void Start()
     {
-        /*Object LoadedExample = JsonUtility.FromJson<Object>(PlayerPrefs.GetString("Quest"));
-
-        Debug.Log(LoadedExample.weed);*/
-        /*
-        SaveLoad qestG = qest.GetComponent<SaveLoad>();
-
-        SaveLoad.Salo weed = JsonUtility.FromJson<Salo>(json);*/
-
-
+        json = PlayerPrefs.GetString("AMOGUS", "def");
         rd = Random.Range(25,170);
         boilTwo.maxValue = 200;
         boil.maxValue = 200;
@@ -42,8 +36,8 @@ public class Boiling : MonoBehaviour
         //NpcMove myObject = JsonUtility.FromJson<NpcMove>(json);
         //string st = PlayerPrefs.GetString("AMOGUS", "def");
 
-
         //kek = JsonUtility.FromJson<NpcMove>(PlayerPrefs.GetString("AMOGUS", "def"));
+        Debug.Log(json);
     }
     public void FF()
     {
@@ -52,6 +46,12 @@ public class Boiling : MonoBehaviour
 
     void Update()
     {
+        obj = JsonUtility.FromJson<Salo>(json);
+        // string json = JsonUtility.ToJson(FF);
+        //string st = PlayerPrefs.GetString("AMOGUS", "def");
+        //if (st == "def") Debug.Log("lox");
+        //else Debug.Log("vse ravno lox");
+
         if (boil.value == boil.maxValue)
         {
             direction = true;
@@ -76,6 +76,7 @@ public class Boiling : MonoBehaviour
         {
             suck.stageNumber = 0;
             suck.boilingProcess.SetActive(false);
+            obj.boil = true;
             reer = true;
             //pointZero.GetComponent<stage>().Anima();
 
@@ -84,5 +85,7 @@ public class Boiling : MonoBehaviour
         {
             pointZero.GetComponent<orders>().GameOver();
         }
+        json = JsonUtility.ToJson(obj);
+        PlayerPrefs.SetString("AMOGUS", json);
     }
 }
