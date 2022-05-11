@@ -780,13 +780,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ecadbf7fb343c4d9495db9da70bd60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  me: {fileID: 354131506}
   dot: {fileID: 1159549106}
   back: {fileID: 905566900}
   MoveSpeed: 1
   step: 0
   kak: {fileID: 2144020224}
   text: 0
-  TimeLeft: 0
   canvas: {fileID: 850937440}
   rotateStart: 0
   rotate: 0

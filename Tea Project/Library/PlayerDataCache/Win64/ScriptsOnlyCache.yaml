@@ -4,7 +4,11 @@ ScriptsOnlyBuild:
     - Boiling
     - Button
     - Eccentric.CameraMove
+    - GameManager
+    - NpcMove
     - PlayerRay
+    - Qest
+    - SaveLoad
     - Selectable
     - generate
     - move_mum
@@ -20,6 +24,12 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -53,13 +63,21 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -76,29 +94,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1742}
     - Class: 114
-      Script: {instanceID: 1820}
+      Script: {instanceID: 1822}
     - Class: 114
-      Script: {instanceID: 2190}
+      Script: {instanceID: 2192}
     - Class: 114
-      Script: {instanceID: 2320}
+      Script: {instanceID: 2322}
     - Class: 114
-      Script: {instanceID: 2440}
+      Script: {instanceID: 2444}
     - Class: 114
-      Script: {instanceID: 2476}
+      Script: {instanceID: 2480}
     - Class: 114
-      Script: {instanceID: 2596}
+      Script: {instanceID: 2562}
     - Class: 114
-      Script: {instanceID: 2782}
+      Script: {instanceID: 2602}
     - Class: 114
-      Script: {instanceID: 3268}
+      Script: {instanceID: 2786}
     - Class: 114
-      Script: {instanceID: 3470}
+      Script: {instanceID: 3272}
     - Class: 114
-      Script: {instanceID: 3510}
+      Script: {instanceID: 3474}
     - Class: 114
-      Script: {instanceID: 3746}
+      Script: {instanceID: 3514}
     - Class: 114
-      Script: {instanceID: 16236}
+      Script: {instanceID: 3750}
+    - Class: 114
+      Script: {instanceID: 4312}
+    - Class: 114
+      Script: {instanceID: 4316}
+    - Class: 114
+      Script: {instanceID: 4348}
+    - Class: 114
+      Script: {instanceID: 15982}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -136,8 +162,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -147,25 +171,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1742}
     - Class: 114
-      Script: {instanceID: 2020}
+      Script: {instanceID: 2022}
     - Class: 114
-      Script: {instanceID: 2320}
+      Script: {instanceID: 2322}
     - Class: 114
-      Script: {instanceID: 2440}
+      Script: {instanceID: 2444}
     - Class: 114
-      Script: {instanceID: 2476}
+      Script: {instanceID: 2480}
     - Class: 114
-      Script: {instanceID: 2596}
+      Script: {instanceID: 2602}
     - Class: 114
-      Script: {instanceID: 2782}
+      Script: {instanceID: 2786}
     - Class: 114
-      Script: {instanceID: 2812}
+      Script: {instanceID: 2816}
     - Class: 114
-      Script: {instanceID: 2866}
+      Script: {instanceID: 2870}
     - Class: 114
-      Script: {instanceID: 3806}
+      Script: {instanceID: 3810}
     - Class: 114
-      Script: {instanceID: 4068}
+      Script: {instanceID: 4072}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -218,19 +242,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1468}
     - Class: 114
-      Script: {instanceID: 2316}
+      Script: {instanceID: 2318}
     - Class: 114
-      Script: {instanceID: 2320}
+      Script: {instanceID: 2322}
     - Class: 114
-      Script: {instanceID: 2432}
+      Script: {instanceID: 2436}
     - Class: 114
-      Script: {instanceID: 2440}
+      Script: {instanceID: 2444}
     - Class: 114
-      Script: {instanceID: 2596}
+      Script: {instanceID: 2562}
     - Class: 114
-      Script: {instanceID: 2782}
+      Script: {instanceID: 2602}
     - Class: 114
-      Script: {instanceID: 4352}
+      Script: {instanceID: 2786}
+    - Class: 114
+      Script: {instanceID: 4362}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -336,13 +362,19 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: 177cae4492a5bcd12d6c18a94f694632
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 6cc672a9fe1540e9928c283ff0e3d95b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: stage
   - hash:
       serializedVersion: 2
-      Hash: 0962f780a60001f39bee899d42173c8a
+      Hash: 1f2cc5711f6d70d436abf75f9e2387cd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: combinations
@@ -372,13 +404,13 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 79081ac700665ef78c399790423eba0b
+      Hash: cf41866849829498d643d466996e87cc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: orders
   - hash:
       serializedVersion: 2
-      Hash: 9de4e5013110d1fbb10135a293bc5822
+      Hash: 586fcd4e466534dbbaa27c93f37b7457
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: move_mum
@@ -390,13 +422,19 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: randomSpec
+  - hash:
+      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: 01def379f505c9c11ed3240896b74187
+      Hash: d096272e694860970d611054eb457b0d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: generate
@@ -432,6 +470,12 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: d1917e09d84b55491771d6eeec2108cb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
@@ -442,12 +486,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
-  - hash:
-      serializedVersion: 2
-      Hash: e059ae5d7cd578b66d42bfb36325f1af
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MouseLook
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -642,7 +680,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 2a8b37674e80a1efa7f671ee25fdddbb
+      Hash: 756db503310983181bfbd02a328011b3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Boiling
@@ -726,16 +764,34 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 2b2e47f035fe7b59dea32ae74508b894
+      Hash: 4d6e960e3e9b5a547f0b70f0c8662275
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: main
+  - hash:
+      serializedVersion: 2
+      Hash: 7f32effa7eb225f6799a8523135f7b1f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NpcMove
+  - hash:
+      serializedVersion: 2
+      Hash: d1917e09d84b55491771d6eeec2108cb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SaveLoad
   - hash:
       serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: 08ff97d0d9712be02e11231f4cae45f8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Qest
   - hash:
       serializedVersion: 2
       Hash: 5d064456c40f7c34690dc0c9d079accc
@@ -765,4 +821,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/menu.unity
   - Assets/Scenes/main.unity
   - Assets/Scenes/mumble.unity
-  playerPath: C:/Users/e.vetrov/Desktop/Tea/Tea Project.exe
+  playerPath: "C:/Users/a.kurdin/Desktop/\u043C\u0430\u043C\u043A\u0430/Tea Project.exe"

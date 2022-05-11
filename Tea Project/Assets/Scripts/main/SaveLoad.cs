@@ -18,7 +18,7 @@ public class SaveLoad : MonoBehaviour
         if (json != "def") obj = JsonUtility.FromJson<Salo>(json);
         else obj = new Salo();
         json = JsonUtility.ToJson(obj);
-        Debug.Log(json);
+        //Debug.Log(json);
         PlayerPrefs.SetString("AMOGUS", json);
     }
     public void classS()

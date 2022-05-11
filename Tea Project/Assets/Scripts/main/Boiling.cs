@@ -90,6 +90,6 @@ public class Boiling : MonoBehaviour
         json = JsonUtility.ToJson(obj);
         Debug.Log(json);
         PlayerPrefs.SetString("AMOGUS", json);
-        PlayerPrefs.SetString("NPC_SAVE", npc);
+        //PlayerPrefs.SetString("NPC_SAVE", npc);
     }
 }

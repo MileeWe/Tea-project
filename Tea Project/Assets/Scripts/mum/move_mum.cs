@@ -17,11 +17,11 @@ public class move_mum : MonoBehaviour
     public string json;
     public Salo obj;
     public NpcMove kipyatok;
-    public CapsuleCollider CAPSULE;
+    //public CapsuleCollider CAPSULE;
     void Start()
     {
         json = PlayerPrefs.GetString("AMOGUS", "def");
-        Debug.Log(json);
+        //Debug.Log(json);
         obj = JsonUtility.FromJson<Salo>(json);
     }
     /*void Update()
@@ -202,8 +202,8 @@ public class move_mum : MonoBehaviour
         obj.weed = true;
         json = JsonUtility.ToJson(obj);
         PlayerPrefs.SetString("AMOGUS", json);
-        Debug.Log(json); 
-        CAPSULE.GetComponent<NpcMove>().Load();
+        //Debug.Log(json); 
+        //CAPSULE.GetComponent<NpcMove>().Load();
         SceneManager.LoadScene("main");
     }
 }

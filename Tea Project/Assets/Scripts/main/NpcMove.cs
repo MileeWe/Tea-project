@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class NpcMove : MonoBehaviour
 {
+    public Vector3 saved_cord;
+    public Quaternion saved_rotate;
+    public string json_saved_cord;
+    public string json_saved_rotate;
+    public string json_load_cord;
+    public string json_load_rotate;
+    public Vector3 load_cord;
+    public Quaternion load_rotate;
+    public Transform me;
     public Transform dot;
     public Transform back;
     public float MoveSpeed = 1;
     public float step;
     public Boiling kak;
     public bool text;
-    public float TimeLeft;
     public GameObject canvas;
     Quaternion startRotation;
     Quaternion endRotation;
@@ -23,6 +31,15 @@ public class NpcMove : MonoBehaviour
     public Salo obj;
     void Start()
     {
+        json_load_cord = PlayerPrefs.GetString("NPC_cord", "def");
+        json_load_rotate = PlayerPrefs.GetString("NPC_rotate", "def");
+        load_cord = JsonUtility.FromJson<Vector3>(json_load_cord);
+        load_rotate = JsonUtility.FromJson<Quaternion>(json_load_rotate);
+        if ((json_load_cord != "def") & (json_load_rotate != "def"))
+        {
+            transform.position = load_cord;
+            transform.rotation = load_rotate;
+        }
         //npc = PlayerPrefs.GetString("AMOGUS", "def");
         //obj = JsonUtility.FromJson<Salo>(npc);
         //npc = PlayerPrefs.GetString("NPC_SAVE","def");
@@ -34,9 +51,9 @@ public class NpcMove : MonoBehaviour
         //    rotationProgress = 0;
     }
     public void Load()
-    { 
+    {
         npc = PlayerPrefs.GetString("NPC_SAVE", "def");
-        xz = JsonUtility.FromJson<NpcMove>(npc);
+        //xz = JsonUtility.FromJson<NpcMove>(npc);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -48,7 +65,7 @@ public class NpcMove : MonoBehaviour
         }
     }
 
-    IEnumerator startRot()
+    IEnumerator startRot()// kakogo ono tytt delaet&
     {
         int i = 0;
         while (true)
@@ -62,6 +79,7 @@ public class NpcMove : MonoBehaviour
             i++;
             yield return new WaitForSeconds(.5f);
         }
+
     }
 
     void Update()
@@ -90,5 +108,16 @@ public class NpcMove : MonoBehaviour
         {
             canvas.SetActive(true);
         }
+        saving();
+        json_saved_cord = JsonUtility.ToJson(saved_cord);
+        json_saved_rotate = JsonUtility.ToJson(saved_rotate);
+        PlayerPrefs.SetString("NPC_cord", json_saved_cord);
+        PlayerPrefs.SetString("NPC_rotate", json_saved_rotate);
+    }
+    public void saving()
+    {
+        saved_cord = transform.position;
+        saved_rotate = transform.rotation;
+        
     }
 }   

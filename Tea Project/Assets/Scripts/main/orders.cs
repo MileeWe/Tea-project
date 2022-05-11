@@ -54,7 +54,7 @@ public class orders : MonoBehaviour
         {
             Debug.Log("ggg");
             canvas.SetActive(true);
-        }
+        }//^ a ono nam nado?^
     }
     public void GameOver()
     {
