@@ -33,10 +33,10 @@ public class NpcMove : MonoBehaviour
     {
         json_load_cord = PlayerPrefs.GetString("NPC_cord", "def");
         json_load_rotate = PlayerPrefs.GetString("NPC_rotate", "def");
-        load_cord = JsonUtility.FromJson<Vector3>(json_load_cord);
-        load_rotate = JsonUtility.FromJson<Quaternion>(json_load_rotate);
         if ((json_load_cord != "def") & (json_load_rotate != "def"))
         {
+            load_cord = JsonUtility.FromJson<Vector3>(json_load_cord);
+            load_rotate = JsonUtility.FromJson<Quaternion>(json_load_rotate);
             transform.position = load_cord;
             transform.rotation = load_rotate;
         }

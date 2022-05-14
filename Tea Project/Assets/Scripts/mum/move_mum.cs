@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class move_mum : MonoBehaviour
 {
+    public class ya_xz_kak_nazvat
+    {
+        public string marijuana;
+        public int sugar;
+        public int strength;
+    }
     public string goodTag;
     public string badTag;
     public string badgoodTag;
@@ -17,12 +23,15 @@ public class move_mum : MonoBehaviour
     public string json;
     public Salo obj;
     public NpcMove kipyatok;
+    public ya_xz_kak_nazvat kak;
     //public CapsuleCollider CAPSULE;
     void Start()
     {
+        kak = new ya_xz_kak_nazvat();
         json = PlayerPrefs.GetString("AMOGUS", "def");
         //Debug.Log(json);
         obj = JsonUtility.FromJson<Salo>(json);
+        json = PlayerPrefs.GetString("order", "def");
     }
     /*void Update()
     {
@@ -32,7 +41,7 @@ public class move_mum : MonoBehaviour
 
     public void OnTriggerEnter(Collider other) 
     {
-        var FBI_CONTROL = orders.marijuana;
+        var FBI_CONTROL = kak.marijuana;
         if (other.gameObject.tag == legendaryTag)
         {
             score += 3;
